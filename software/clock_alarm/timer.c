@@ -1,6 +1,7 @@
-#include "sys/alt_stdio.h"
+// #include "sys/alt_stdio.h"
 #include "sys/alt_irq.h"
 #include "system.h"
+#include "alarm.c"
 
 
 #define SECONDS_IN_DAY 86400
@@ -30,6 +31,7 @@ void timer_interrupt(void* isr_context) {
 		time_counter = 0;
 	}
 
+	check_alarm(time_counter);
 	// alt_printf("Timer: %x\n", time_counter);
 }
 
