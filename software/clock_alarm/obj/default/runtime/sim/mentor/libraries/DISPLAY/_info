@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Quartus/software/clock_alarm/obj/default/runtime/sim/mentor
+vsystem_DISPLAY
+!s110 1619666672
+!i10b 1
+!s100 fR3l9OnbjjWWMP01Y9G:c0
+Ic7==4[FV_M=4MjAYoYmmg2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1619571149
+8E:/Quartus/system/testbench/system_tb/simulation/submodules/system_DISPLAY.v
+FE:/Quartus/system/testbench/system_tb/simulation/submodules/system_DISPLAY.v
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1619666672.000000
+!s107 E:/Quartus/system/testbench/system_tb/simulation/submodules/system_DISPLAY.v|
+!s90 -reportprogress|300|E:/Quartus/system/testbench/system_tb/simulation/submodules/system_DISPLAY.v|-work|DISPLAY|
+!i113 1
+o-work DISPLAY
+tCvgOpt 0
+nsystem_@d@i@s@p@l@a@y

@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Quartus/software/clock_alarm/obj/default/runtime/sim/mentor
+vsystem_JTAG
+Z1 !s110 1619666672
+!i10b 1
+!s100 Vaj7bE<^=UODQK`4oaAM:3
+IS=LWnTBe5Y^G<gA=nnISi2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1619571149
+Z4 8E:/Quartus/system/testbench/system_tb/simulation/submodules/system_JTAG.v
+Z5 FE:/Quartus/system/testbench/system_tb/simulation/submodules/system_JTAG.v
+L0 331
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1619666672.000000
+Z8 !s107 E:/Quartus/system/testbench/system_tb/simulation/submodules/system_JTAG.v|
+Z9 !s90 -reportprogress|300|E:/Quartus/system/testbench/system_tb/simulation/submodules/system_JTAG.v|-work|JTAG|
+!i113 1
+Z10 o-work JTAG
+Z11 tCvgOpt 0
+nsystem_@j@t@a@g
+vsystem_JTAG_scfifo_r
+R1
+!i10b 1
+!s100 <iVl<JNjWF6F2Y904lC070
+IgYP7RZ7ejHgOTK028d^iA2
+R2
+R0
+R3
+R4
+R5
+L0 243
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nsystem_@j@t@a@g_scfifo_r
+vsystem_JTAG_scfifo_w
+R1
+!i10b 1
+!s100 BEl^dWF9F2]:S[4lTMdU]0
+Iei3zc]IeSe@9:28C_<o?<3
+R2
+R0
+R3
+R4
+R5
+L0 78
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nsystem_@j@t@a@g_scfifo_w
+vsystem_JTAG_sim_scfifo_r
+R1
+!i10b 1
+!s100 N;3;d1@=X6N5En_zhM^nK2
+I`;UjH0hP<ffPc@;16HH=i0
+R2
+R0
+R3
+R4
+R5
+L0 164
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nsystem_@j@t@a@g_sim_scfifo_r
+vsystem_JTAG_sim_scfifo_w
+R1
+!i10b 1
+!s100 lBF`[=hl6J`A]@X9MeGf73
+Io`DRiDN2@dlX@79[aKQ9A1
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nsystem_@j@t@a@g_sim_scfifo_w
