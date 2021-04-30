@@ -26,8 +26,8 @@ void check_alarm(int current_time) {
 	if (alarm_time <= current_time && current_time <= alarm_time + ALARM_DURATION) {
 		*LED_DATA = pulse_value;
 
-		if (pulse_value == 1) pulse_value = 0;
-		else pulse_value = 1;
+		if (pulse_value == 1023) pulse_value = 0;
+		else pulse_value = 1023;
 
 		// alt_putstr("Alarm!\n");
 	}
