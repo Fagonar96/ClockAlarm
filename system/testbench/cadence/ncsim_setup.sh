@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 19.1 670 win32 2021.04.28.23:16:11
+# ACDS 19.1 670 win32 2021.04.29.22:28:43
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 19.1 670 win32 2021.04.28.23:16:11
+# ACDS 19.1 670 win32 2021.04.29.22:28:43
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system_tb"
@@ -173,12 +173,12 @@ mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/TIMER/
 mkdir -p ./libraries/RAM/
 mkdir -p ./libraries/JTAG/
-mkdir -p ./libraries/INC_HOUR_BUTTON/
 mkdir -p ./libraries/HOUR_1/
 mkdir -p ./libraries/CPU/
+mkdir -p ./libraries/CONFIRM_BUTTON/
 mkdir -p ./libraries/system_inst_reset_bfm/
-mkdir -p ./libraries/system_inst_inc_hour_button_bfm/
 mkdir -p ./libraries/system_inst_hour_1_bfm/
+mkdir -p ./libraries/system_inst_confirm_button_bfm/
 mkdir -p ./libraries/system_inst_clk_bfm/
 mkdir -p ./libraries/system_inst/
 mkdir -p ./libraries/altera_ver/
@@ -262,12 +262,12 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_TIMER.v"                                                -work TIMER                                 -cdslib ./cds_libs/TIMER.cds.lib                                
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.v"                                                  -work RAM                                   -cdslib ./cds_libs/RAM.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_JTAG.v"                                                 -work JTAG                                  -cdslib ./cds_libs/JTAG.cds.lib                                 
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_INC_HOUR_BUTTON.v"                                      -work INC_HOUR_BUTTON                       -cdslib ./cds_libs/INC_HOUR_BUTTON.cds.lib                      
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_HOUR_1.v"                                               -work HOUR_1                                -cdslib ./cds_libs/HOUR_1.cds.lib                               
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU.v"                                                  -work CPU                                   -cdslib ./cds_libs/CPU.cds.lib                                  
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v"                                       -work CONFIRM_BUTTON                        -cdslib ./cds_libs/CONFIRM_BUTTON.cds.lib                       
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_reset_source.sv"                                 -work system_inst_reset_bfm                 -cdslib ./cds_libs/system_inst_reset_bfm.cds.lib                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                    -work system_inst_inc_hour_button_bfm       -cdslib ./cds_libs/system_inst_inc_hour_button_bfm.cds.lib      
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm.sv"                                         -work system_inst_hour_1_bfm                -cdslib ./cds_libs/system_inst_hour_1_bfm.cds.lib               
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                    -work system_inst_hour_1_bfm                -cdslib ./cds_libs/system_inst_hour_1_bfm.cds.lib               
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm.sv"                                         -work system_inst_confirm_button_bfm        -cdslib ./cds_libs/system_inst_confirm_button_bfm.cds.lib       
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_clock_source.sv"                                 -work system_inst_clk_bfm                   -cdslib ./cds_libs/system_inst_clk_bfm.cds.lib                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system.v"                                                      -work system_inst                           -cdslib ./cds_libs/system_inst.cds.lib                          
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/system_tb.v"                                                                                                                                                                          

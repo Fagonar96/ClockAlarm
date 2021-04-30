@@ -7,26 +7,26 @@ module system_tb (
 	);
 
 	wire        system_inst_clk_bfm_clk_clk;                    // system_inst_clk_bfm:clk -> [system_inst:clk_clk, system_inst_reset_bfm:clk]
+	wire  [0:0] system_inst_confirm_button_bfm_conduit_export;  // system_inst_confirm_button_bfm:sig_export -> system_inst:confirm_button_export
 	wire  [7:0] system_inst_hour_1_export;                      // system_inst:hour_1_export -> system_inst_hour_1_bfm:sig_export
 	wire  [7:0] system_inst_hour_2_export;                      // system_inst:hour_2_export -> system_inst_hour_2_bfm:sig_export
-	wire  [7:0] system_inst_inc_hour_button_bfm_conduit_export; // system_inst_inc_hour_button_bfm:sig_export -> system_inst:inc_hour_button_export
-	wire  [7:0] system_inst_inc_min_button_bfm_conduit_export;  // system_inst_inc_min_button_bfm:sig_export -> system_inst:inc_min_button_export
-	wire  [7:0] system_inst_inc_sec_button_bfm_conduit_export;  // system_inst_inc_sec_button_bfm:sig_export -> system_inst:inc_sec_button_export
+	wire  [0:0] system_inst_inc_hour_button_bfm_conduit_export; // system_inst_inc_hour_button_bfm:sig_export -> system_inst:inc_hour_button_export
+	wire  [0:0] system_inst_inc_min_button_bfm_conduit_export;  // system_inst_inc_min_button_bfm:sig_export -> system_inst:inc_min_button_export
 	wire  [7:0] system_inst_leds_export;                        // system_inst:leds_export -> system_inst_leds_bfm:sig_export
 	wire  [7:0] system_inst_min_1_export;                       // system_inst:min_1_export -> system_inst_min_1_bfm:sig_export
 	wire  [7:0] system_inst_min_2_export;                       // system_inst:min_2_export -> system_inst_min_2_bfm:sig_export
 	wire  [7:0] system_inst_sec_1_export;                       // system_inst:sec_1_export -> system_inst_sec_1_bfm:sig_export
 	wire  [7:0] system_inst_sec_2_export;                       // system_inst:sec_2_export -> system_inst_sec_2_bfm:sig_export
-	wire  [7:0] system_inst_set_mode_button_bfm_conduit_export; // system_inst_set_mode_button_bfm:sig_export -> system_inst:set_mode_button_export
+	wire  [0:0] system_inst_set_mode_button_bfm_conduit_export; // system_inst_set_mode_button_bfm:sig_export -> system_inst:set_mode_button_export
 	wire        system_inst_reset_bfm_reset_reset;              // system_inst_reset_bfm:reset -> system_inst:reset_reset_n
 
 	system system_inst (
 		.clk_clk                (system_inst_clk_bfm_clk_clk),                    //             clk.clk
+		.confirm_button_export  (system_inst_confirm_button_bfm_conduit_export),  //  confirm_button.export
 		.hour_1_export          (system_inst_hour_1_export),                      //          hour_1.export
 		.hour_2_export          (system_inst_hour_2_export),                      //          hour_2.export
 		.inc_hour_button_export (system_inst_inc_hour_button_bfm_conduit_export), // inc_hour_button.export
 		.inc_min_button_export  (system_inst_inc_min_button_bfm_conduit_export),  //  inc_min_button.export
-		.inc_sec_button_export  (system_inst_inc_sec_button_bfm_conduit_export),  //  inc_sec_button.export
 		.leds_export            (system_inst_leds_export),                        //            leds.export
 		.min_1_export           (system_inst_min_1_export),                       //           min_1.export
 		.min_2_export           (system_inst_min_2_export),                       //           min_2.export
@@ -43,35 +43,35 @@ module system_tb (
 		.clk (system_inst_clk_bfm_clk_clk)  // clk.clk
 	);
 
-	altera_conduit_bfm system_inst_hour_1_bfm (
+	altera_conduit_bfm system_inst_confirm_button_bfm (
+		.sig_export (system_inst_confirm_button_bfm_conduit_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0002 system_inst_hour_1_bfm (
 		.sig_export (system_inst_hour_1_export)  // conduit.export
 	);
 
-	altera_conduit_bfm system_inst_hour_2_bfm (
+	altera_conduit_bfm_0002 system_inst_hour_2_bfm (
 		.sig_export (system_inst_hour_2_export)  // conduit.export
 	);
 
-	altera_conduit_bfm_0002 system_inst_inc_hour_button_bfm (
+	altera_conduit_bfm system_inst_inc_hour_button_bfm (
 		.sig_export (system_inst_inc_hour_button_bfm_conduit_export)  // conduit.export
 	);
 
-	altera_conduit_bfm_0002 system_inst_inc_min_button_bfm (
+	altera_conduit_bfm system_inst_inc_min_button_bfm (
 		.sig_export (system_inst_inc_min_button_bfm_conduit_export)  // conduit.export
 	);
 
-	altera_conduit_bfm_0002 system_inst_inc_sec_button_bfm (
-		.sig_export (system_inst_inc_sec_button_bfm_conduit_export)  // conduit.export
-	);
-
-	altera_conduit_bfm system_inst_leds_bfm (
+	altera_conduit_bfm_0002 system_inst_leds_bfm (
 		.sig_export (system_inst_leds_export)  // conduit.export
 	);
 
-	altera_conduit_bfm system_inst_min_1_bfm (
+	altera_conduit_bfm_0002 system_inst_min_1_bfm (
 		.sig_export (system_inst_min_1_export)  // conduit.export
 	);
 
-	altera_conduit_bfm system_inst_min_2_bfm (
+	altera_conduit_bfm_0002 system_inst_min_2_bfm (
 		.sig_export (system_inst_min_2_export)  // conduit.export
 	);
 
@@ -83,15 +83,15 @@ module system_tb (
 		.clk   (system_inst_clk_bfm_clk_clk)        //   clk.clk
 	);
 
-	altera_conduit_bfm system_inst_sec_1_bfm (
+	altera_conduit_bfm_0002 system_inst_sec_1_bfm (
 		.sig_export (system_inst_sec_1_export)  // conduit.export
 	);
 
-	altera_conduit_bfm system_inst_sec_2_bfm (
+	altera_conduit_bfm_0002 system_inst_sec_2_bfm (
 		.sig_export (system_inst_sec_2_export)  // conduit.export
 	);
 
-	altera_conduit_bfm_0002 system_inst_set_mode_button_bfm (
+	altera_conduit_bfm system_inst_set_mode_button_bfm (
 		.sig_export (system_inst_set_mode_button_bfm_conduit_export)  // conduit.export
 	);
 

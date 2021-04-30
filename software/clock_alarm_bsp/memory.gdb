@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'CPU' in SOPC Builder design 'system'
-# SOPC Builder design path: E:/Quartus/system.sopcinfo
+# SOPC Builder design path: E:/ClockAlarm/system.sopcinfo
 #
-# Generated: Tue Apr 27 18:56:12 CST 2021
+# Generated: Thu Apr 29 15:31:15 CST 2021
 
 # DO NOT MODIFY THIS FILE
 #

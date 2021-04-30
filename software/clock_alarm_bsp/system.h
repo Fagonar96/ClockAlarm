@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'CPU' in SOPC Builder design 'system'
- * SOPC Builder design path: E:/Quartus/system.sopcinfo
+ * SOPC Builder design path: E:/ClockAlarm/system.sopcinfo
  *
- * Generated: Tue Apr 27 18:56:12 CST 2021
+ * Generated: Thu Apr 29 22:28:59 CST 2021
  */
 
 /*
@@ -56,30 +56,30 @@
 
 
 /*
- * BUTTONS configuration
+ * CONFIRM_BUTTON configuration
  *
  */
 
-#define ALT_MODULE_CLASS_BUTTONS altera_avalon_pio
-#define BUTTONS_BASE 0x1010
-#define BUTTONS_BIT_CLEARING_EDGE_REGISTER 0
-#define BUTTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define BUTTONS_CAPTURE 0
-#define BUTTONS_DATA_WIDTH 8
-#define BUTTONS_DO_TEST_BENCH_WIRING 0
-#define BUTTONS_DRIVEN_SIM_VALUE 0
-#define BUTTONS_EDGE_TYPE "NONE"
-#define BUTTONS_FREQ 50000000
-#define BUTTONS_HAS_IN 1
-#define BUTTONS_HAS_OUT 0
-#define BUTTONS_HAS_TRI 0
-#define BUTTONS_IRQ -1
-#define BUTTONS_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define BUTTONS_IRQ_TYPE "NONE"
-#define BUTTONS_NAME "/dev/BUTTONS"
-#define BUTTONS_RESET_VALUE 0
-#define BUTTONS_SPAN 16
-#define BUTTONS_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_CONFIRM_BUTTON altera_avalon_pio
+#define CONFIRM_BUTTON_BASE 0x1040
+#define CONFIRM_BUTTON_BIT_CLEARING_EDGE_REGISTER 0
+#define CONFIRM_BUTTON_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CONFIRM_BUTTON_CAPTURE 1
+#define CONFIRM_BUTTON_DATA_WIDTH 1
+#define CONFIRM_BUTTON_DO_TEST_BENCH_WIRING 0
+#define CONFIRM_BUTTON_DRIVEN_SIM_VALUE 0
+#define CONFIRM_BUTTON_EDGE_TYPE "FALLING"
+#define CONFIRM_BUTTON_FREQ 50000000
+#define CONFIRM_BUTTON_HAS_IN 1
+#define CONFIRM_BUTTON_HAS_OUT 0
+#define CONFIRM_BUTTON_HAS_TRI 0
+#define CONFIRM_BUTTON_IRQ 4
+#define CONFIRM_BUTTON_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define CONFIRM_BUTTON_IRQ_TYPE "EDGE"
+#define CONFIRM_BUTTON_NAME "/dev/CONFIRM_BUTTON"
+#define CONFIRM_BUTTON_RESET_VALUE 0
+#define CONFIRM_BUTTON_SPAN 16
+#define CONFIRM_BUTTON_TYPE "altera_avalon_pio"
 
 
 /*
@@ -156,33 +156,6 @@
 
 
 /*
- * DISPLAY configuration
- *
- */
-
-#define ALT_MODULE_CLASS_DISPLAY altera_avalon_pio
-#define DISPLAY_BASE 0x1020
-#define DISPLAY_BIT_CLEARING_EDGE_REGISTER 0
-#define DISPLAY_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define DISPLAY_CAPTURE 0
-#define DISPLAY_DATA_WIDTH 8
-#define DISPLAY_DO_TEST_BENCH_WIRING 0
-#define DISPLAY_DRIVEN_SIM_VALUE 0
-#define DISPLAY_EDGE_TYPE "NONE"
-#define DISPLAY_FREQ 50000000
-#define DISPLAY_HAS_IN 0
-#define DISPLAY_HAS_OUT 1
-#define DISPLAY_HAS_TRI 0
-#define DISPLAY_IRQ -1
-#define DISPLAY_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define DISPLAY_IRQ_TYPE "NONE"
-#define DISPLAY_NAME "/dev/DISPLAY"
-#define DISPLAY_RESET_VALUE 0
-#define DISPLAY_SPAN 16
-#define DISPLAY_TYPE "altera_avalon_pio"
-
-
-/*
  * Define for each module class mastered by the CPU
  *
  */
@@ -190,7 +163,116 @@
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_PIO
+#define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_GEN2
+
+
+/*
+ * HOUR_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_HOUR_1 altera_avalon_pio
+#define HOUR_1_BASE 0x1050
+#define HOUR_1_BIT_CLEARING_EDGE_REGISTER 0
+#define HOUR_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HOUR_1_CAPTURE 0
+#define HOUR_1_DATA_WIDTH 8
+#define HOUR_1_DO_TEST_BENCH_WIRING 0
+#define HOUR_1_DRIVEN_SIM_VALUE 0
+#define HOUR_1_EDGE_TYPE "NONE"
+#define HOUR_1_FREQ 50000000
+#define HOUR_1_HAS_IN 0
+#define HOUR_1_HAS_OUT 1
+#define HOUR_1_HAS_TRI 0
+#define HOUR_1_IRQ -1
+#define HOUR_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HOUR_1_IRQ_TYPE "NONE"
+#define HOUR_1_NAME "/dev/HOUR_1"
+#define HOUR_1_RESET_VALUE 0
+#define HOUR_1_SPAN 16
+#define HOUR_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * HOUR_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_HOUR_2 altera_avalon_pio
+#define HOUR_2_BASE 0x1060
+#define HOUR_2_BIT_CLEARING_EDGE_REGISTER 0
+#define HOUR_2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HOUR_2_CAPTURE 0
+#define HOUR_2_DATA_WIDTH 8
+#define HOUR_2_DO_TEST_BENCH_WIRING 0
+#define HOUR_2_DRIVEN_SIM_VALUE 0
+#define HOUR_2_EDGE_TYPE "NONE"
+#define HOUR_2_FREQ 50000000
+#define HOUR_2_HAS_IN 0
+#define HOUR_2_HAS_OUT 1
+#define HOUR_2_HAS_TRI 0
+#define HOUR_2_IRQ -1
+#define HOUR_2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HOUR_2_IRQ_TYPE "NONE"
+#define HOUR_2_NAME "/dev/HOUR_2"
+#define HOUR_2_RESET_VALUE 0
+#define HOUR_2_SPAN 16
+#define HOUR_2_TYPE "altera_avalon_pio"
+
+
+/*
+ * INC_HOUR_BUTTON configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_INC_HOUR_BUTTON altera_avalon_pio
+#define INC_HOUR_BUTTON_BASE 0x1020
+#define INC_HOUR_BUTTON_BIT_CLEARING_EDGE_REGISTER 0
+#define INC_HOUR_BUTTON_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define INC_HOUR_BUTTON_CAPTURE 1
+#define INC_HOUR_BUTTON_DATA_WIDTH 1
+#define INC_HOUR_BUTTON_DO_TEST_BENCH_WIRING 0
+#define INC_HOUR_BUTTON_DRIVEN_SIM_VALUE 0
+#define INC_HOUR_BUTTON_EDGE_TYPE "FALLING"
+#define INC_HOUR_BUTTON_FREQ 50000000
+#define INC_HOUR_BUTTON_HAS_IN 1
+#define INC_HOUR_BUTTON_HAS_OUT 0
+#define INC_HOUR_BUTTON_HAS_TRI 0
+#define INC_HOUR_BUTTON_IRQ 2
+#define INC_HOUR_BUTTON_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define INC_HOUR_BUTTON_IRQ_TYPE "EDGE"
+#define INC_HOUR_BUTTON_NAME "/dev/INC_HOUR_BUTTON"
+#define INC_HOUR_BUTTON_RESET_VALUE 0
+#define INC_HOUR_BUTTON_SPAN 16
+#define INC_HOUR_BUTTON_TYPE "altera_avalon_pio"
+
+
+/*
+ * INC_MIN_BUTTON configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_INC_MIN_BUTTON altera_avalon_pio
+#define INC_MIN_BUTTON_BASE 0x1030
+#define INC_MIN_BUTTON_BIT_CLEARING_EDGE_REGISTER 0
+#define INC_MIN_BUTTON_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define INC_MIN_BUTTON_CAPTURE 1
+#define INC_MIN_BUTTON_DATA_WIDTH 1
+#define INC_MIN_BUTTON_DO_TEST_BENCH_WIRING 0
+#define INC_MIN_BUTTON_DRIVEN_SIM_VALUE 0
+#define INC_MIN_BUTTON_EDGE_TYPE "FALLING"
+#define INC_MIN_BUTTON_FREQ 50000000
+#define INC_MIN_BUTTON_HAS_IN 1
+#define INC_MIN_BUTTON_HAS_OUT 0
+#define INC_MIN_BUTTON_HAS_TRI 0
+#define INC_MIN_BUTTON_IRQ 3
+#define INC_MIN_BUTTON_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define INC_MIN_BUTTON_IRQ_TYPE "EDGE"
+#define INC_MIN_BUTTON_NAME "/dev/INC_MIN_BUTTON"
+#define INC_MIN_BUTTON_RESET_VALUE 0
+#define INC_MIN_BUTTON_SPAN 16
+#define INC_MIN_BUTTON_TYPE "altera_avalon_pio"
 
 
 /*
@@ -239,6 +321,60 @@
 
 
 /*
+ * MIN_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_MIN_1 altera_avalon_pio
+#define MIN_1_BASE 0x1070
+#define MIN_1_BIT_CLEARING_EDGE_REGISTER 0
+#define MIN_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MIN_1_CAPTURE 0
+#define MIN_1_DATA_WIDTH 8
+#define MIN_1_DO_TEST_BENCH_WIRING 0
+#define MIN_1_DRIVEN_SIM_VALUE 0
+#define MIN_1_EDGE_TYPE "NONE"
+#define MIN_1_FREQ 50000000
+#define MIN_1_HAS_IN 0
+#define MIN_1_HAS_OUT 1
+#define MIN_1_HAS_TRI 0
+#define MIN_1_IRQ -1
+#define MIN_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MIN_1_IRQ_TYPE "NONE"
+#define MIN_1_NAME "/dev/MIN_1"
+#define MIN_1_RESET_VALUE 0
+#define MIN_1_SPAN 16
+#define MIN_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * MIN_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_MIN_2 altera_avalon_pio
+#define MIN_2_BASE 0x1080
+#define MIN_2_BIT_CLEARING_EDGE_REGISTER 0
+#define MIN_2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MIN_2_CAPTURE 0
+#define MIN_2_DATA_WIDTH 8
+#define MIN_2_DO_TEST_BENCH_WIRING 0
+#define MIN_2_DRIVEN_SIM_VALUE 0
+#define MIN_2_EDGE_TYPE "NONE"
+#define MIN_2_FREQ 50000000
+#define MIN_2_HAS_IN 0
+#define MIN_2_HAS_OUT 1
+#define MIN_2_HAS_TRI 0
+#define MIN_2_IRQ -1
+#define MIN_2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MIN_2_IRQ_TYPE "NONE"
+#define MIN_2_NAME "/dev/MIN_2"
+#define MIN_2_RESET_VALUE 0
+#define MIN_2_SPAN 16
+#define MIN_2_TYPE "altera_avalon_pio"
+
+
+/*
  * RAM configuration
  *
  */
@@ -265,6 +401,87 @@
 #define RAM_SPAN 4096
 #define RAM_TYPE "altera_avalon_onchip_memory2"
 #define RAM_WRITABLE 1
+
+
+/*
+ * SEC_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SEC_1 altera_avalon_pio
+#define SEC_1_BASE 0x1090
+#define SEC_1_BIT_CLEARING_EDGE_REGISTER 0
+#define SEC_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SEC_1_CAPTURE 0
+#define SEC_1_DATA_WIDTH 8
+#define SEC_1_DO_TEST_BENCH_WIRING 0
+#define SEC_1_DRIVEN_SIM_VALUE 0
+#define SEC_1_EDGE_TYPE "NONE"
+#define SEC_1_FREQ 50000000
+#define SEC_1_HAS_IN 0
+#define SEC_1_HAS_OUT 1
+#define SEC_1_HAS_TRI 0
+#define SEC_1_IRQ -1
+#define SEC_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SEC_1_IRQ_TYPE "NONE"
+#define SEC_1_NAME "/dev/SEC_1"
+#define SEC_1_RESET_VALUE 0
+#define SEC_1_SPAN 16
+#define SEC_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * SEC_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SEC_2 altera_avalon_pio
+#define SEC_2_BASE 0x1100
+#define SEC_2_BIT_CLEARING_EDGE_REGISTER 0
+#define SEC_2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SEC_2_CAPTURE 0
+#define SEC_2_DATA_WIDTH 8
+#define SEC_2_DO_TEST_BENCH_WIRING 0
+#define SEC_2_DRIVEN_SIM_VALUE 0
+#define SEC_2_EDGE_TYPE "NONE"
+#define SEC_2_FREQ 50000000
+#define SEC_2_HAS_IN 0
+#define SEC_2_HAS_OUT 1
+#define SEC_2_HAS_TRI 0
+#define SEC_2_IRQ -1
+#define SEC_2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SEC_2_IRQ_TYPE "NONE"
+#define SEC_2_NAME "/dev/SEC_2"
+#define SEC_2_RESET_VALUE 0
+#define SEC_2_SPAN 16
+#define SEC_2_TYPE "altera_avalon_pio"
+
+
+/*
+ * SET_MODE_BUTTON configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SET_MODE_BUTTON altera_avalon_pio
+#define SET_MODE_BUTTON_BASE 0x1010
+#define SET_MODE_BUTTON_BIT_CLEARING_EDGE_REGISTER 0
+#define SET_MODE_BUTTON_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SET_MODE_BUTTON_CAPTURE 1
+#define SET_MODE_BUTTON_DATA_WIDTH 1
+#define SET_MODE_BUTTON_DO_TEST_BENCH_WIRING 0
+#define SET_MODE_BUTTON_DRIVEN_SIM_VALUE 0
+#define SET_MODE_BUTTON_EDGE_TYPE "FALLING"
+#define SET_MODE_BUTTON_FREQ 50000000
+#define SET_MODE_BUTTON_HAS_IN 1
+#define SET_MODE_BUTTON_HAS_OUT 0
+#define SET_MODE_BUTTON_HAS_TRI 0
+#define SET_MODE_BUTTON_IRQ 1
+#define SET_MODE_BUTTON_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define SET_MODE_BUTTON_IRQ_TYPE "EDGE"
+#define SET_MODE_BUTTON_NAME "/dev/SET_MODE_BUTTON"
+#define SET_MODE_BUTTON_RESET_VALUE 0
+#define SET_MODE_BUTTON_SPAN 16
+#define SET_MODE_BUTTON_TYPE "altera_avalon_pio"
 
 
 /*
@@ -304,6 +521,32 @@
 
 
 /*
+ * TIMER configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_TIMER altera_avalon_timer
+#define TIMER_ALWAYS_RUN 1
+#define TIMER_BASE 0x2000
+#define TIMER_COUNTER_SIZE 32
+#define TIMER_FIXED_PERIOD 1
+#define TIMER_FREQ 50000000
+#define TIMER_IRQ 5
+#define TIMER_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define TIMER_LOAD_VALUE 499
+#define TIMER_MULT 0.001
+#define TIMER_NAME "/dev/TIMER"
+#define TIMER_PERIOD 0.01
+#define TIMER_PERIOD_UNITS "ms"
+#define TIMER_RESET_OUTPUT 0
+#define TIMER_SNAPSHOT 1
+#define TIMER_SPAN 32
+#define TIMER_TICKS_PER_SEC 99999
+#define TIMER_TIMEOUT_PULSE_OUTPUT 0
+#define TIMER_TYPE "altera_avalon_timer"
+
+
+/*
  * hal configuration
  *
  */
@@ -311,6 +554,6 @@
 #define ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API
 #define ALT_MAX_FD 4
 #define ALT_SYS_CLK none
-#define ALT_TIMESTAMP_CLK none
+#define ALT_TIMESTAMP_CLK TIMER
 
 #endif /* __SYSTEM_H_ */

@@ -36,12 +36,12 @@ DEFINE mm_interconnect_0                     ./libraries/mm_interconnect_0/
 DEFINE TIMER                                 ./libraries/TIMER/                                
 DEFINE RAM                                   ./libraries/RAM/                                  
 DEFINE JTAG                                  ./libraries/JTAG/                                 
-DEFINE INC_HOUR_BUTTON                       ./libraries/INC_HOUR_BUTTON/                      
 DEFINE HOUR_1                                ./libraries/HOUR_1/                               
 DEFINE CPU                                   ./libraries/CPU/                                  
+DEFINE CONFIRM_BUTTON                        ./libraries/CONFIRM_BUTTON/                       
 DEFINE system_inst_reset_bfm                 ./libraries/system_inst_reset_bfm/                
-DEFINE system_inst_inc_hour_button_bfm       ./libraries/system_inst_inc_hour_button_bfm/      
 DEFINE system_inst_hour_1_bfm                ./libraries/system_inst_hour_1_bfm/               
+DEFINE system_inst_confirm_button_bfm        ./libraries/system_inst_confirm_button_bfm/       
 DEFINE system_inst_clk_bfm                   ./libraries/system_inst_clk_bfm/                  
 DEFINE system_inst                           ./libraries/system_inst/                          
 DEFINE altera_ver                            ./libraries/altera_ver/                           

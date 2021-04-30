@@ -25,7 +25,7 @@
          type = "int";
       }
    }
-   element system_inst_hour_1_bfm
+   element system_inst_confirm_button_bfm
    {
       datum _sortIndex
       {
@@ -33,7 +33,7 @@
          type = "int";
       }
    }
-   element system_inst_hour_2_bfm
+   element system_inst_hour_1_bfm
    {
       datum _sortIndex
       {
@@ -41,7 +41,7 @@
          type = "int";
       }
    }
-   element system_inst_inc_hour_button_bfm
+   element system_inst_hour_2_bfm
    {
       datum _sortIndex
       {
@@ -49,7 +49,7 @@
          type = "int";
       }
    }
-   element system_inst_inc_min_button_bfm
+   element system_inst_inc_hour_button_bfm
    {
       datum _sortIndex
       {
@@ -57,7 +57,7 @@
          type = "int";
       }
    }
-   element system_inst_inc_sec_button_bfm
+   element system_inst_inc_min_button_bfm
    {
       datum _sortIndex
       {
@@ -161,6 +161,17 @@
   <parameter name="CLOCK_UNIT" value="1" />
  </module>
  <module
+   name="system_inst_confirm_button_bfm"
+   kind="altera_conduit_bfm"
+   version="19.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
    name="system_inst_hour_1_bfm"
    kind="altera_conduit_bfm"
    version="19.1"
@@ -191,7 +202,7 @@
   <parameter name="ENABLE_RESET" value="false" />
   <parameter name="SIGNAL_DIRECTIONS" value="output" />
   <parameter name="SIGNAL_ROLES" value="export" />
-  <parameter name="SIGNAL_WIDTHS" value="8" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
    name="system_inst_inc_min_button_bfm"
@@ -202,18 +213,7 @@
   <parameter name="ENABLE_RESET" value="false" />
   <parameter name="SIGNAL_DIRECTIONS" value="output" />
   <parameter name="SIGNAL_ROLES" value="export" />
-  <parameter name="SIGNAL_WIDTHS" value="8" />
- </module>
- <module
-   name="system_inst_inc_sec_button_bfm"
-   kind="altera_conduit_bfm"
-   version="19.1"
-   enabled="1">
-  <parameter name="CLOCKED_SIGNAL" value="false" />
-  <parameter name="ENABLE_RESET" value="false" />
-  <parameter name="SIGNAL_DIRECTIONS" value="output" />
-  <parameter name="SIGNAL_ROLES" value="export" />
-  <parameter name="SIGNAL_WIDTHS" value="8" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
    name="system_inst_leds_bfm"
@@ -287,7 +287,7 @@
   <parameter name="ENABLE_RESET" value="false" />
   <parameter name="SIGNAL_DIRECTIONS" value="output" />
   <parameter name="SIGNAL_ROLES" value="export" />
-  <parameter name="SIGNAL_WIDTHS" value="8" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <connection
    kind="clock"
@@ -299,6 +299,17 @@
    version="19.1"
    start="system_inst_clk_bfm.clk"
    end="system_inst_reset_bfm.clk" />
+ <connection
+   kind="conduit"
+   version="19.1"
+   start="system_inst_confirm_button_bfm.conduit"
+   end="system_inst.confirm_button">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
  <connection
    kind="conduit"
    version="19.1"
@@ -337,17 +348,6 @@
    version="19.1"
    start="system_inst_inc_min_button_bfm.conduit"
    end="system_inst.inc_min_button">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="19.1"
-   start="system_inst_inc_sec_button_bfm.conduit"
-   end="system_inst.inc_sec_button">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

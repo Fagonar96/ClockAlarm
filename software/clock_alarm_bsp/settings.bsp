@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 28, 2021 9:02:16 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1619665336130</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>E:\Quartus\software\clock_alarm_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Apr 29, 2021 10:28:59 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1619756939571</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>E:\ClockAlarm\software\clock_alarm_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>E:\Quartus\system.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>E:\ClockAlarm\system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>CPU</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -26,7 +26,7 @@
                 <SettingName>hal.timestamp_timer</SettingName>
                 <Identifier>ALT_TIMESTAMP_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>none</Value>
+                <Value>TIMER</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of timestamp timer device. This device is used by Altera HAL timestamp drivers for high-resolution time measurement. This setting defines the value of ALT_TIMESTAMP_CLK in system.h.</Description>
@@ -911,16 +911,70 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>BUTTONS</slaveDescriptor>
+                <slaveDescriptor>SET_MODE_BUTTON</slaveDescriptor>
                 <addressRange>0x00001010 - 0x0000101F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>DISPLAY</slaveDescriptor>
+                <slaveDescriptor>INC_HOUR_BUTTON</slaveDescriptor>
                 <addressRange>0x00001020 - 0x0000102F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>INC_MIN_BUTTON</slaveDescriptor>
+                <addressRange>0x00001030 - 0x0000103F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>CONFIRM_BUTTON</slaveDescriptor>
+                <addressRange>0x00001040 - 0x0000104F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>HOUR_1</slaveDescriptor>
+                <addressRange>0x00001050 - 0x0000105F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>HOUR_2</slaveDescriptor>
+                <addressRange>0x00001060 - 0x0000106F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>MIN_1</slaveDescriptor>
+                <addressRange>0x00001070 - 0x0000107F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>MIN_2</slaveDescriptor>
+                <addressRange>0x00001080 - 0x0000108F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>SEC_1</slaveDescriptor>
+                <addressRange>0x00001090 - 0x0000109F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>SEC_2</slaveDescriptor>
+                <addressRange>0x00001100 - 0x0000110F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>TIMER</slaveDescriptor>
+                <addressRange>0x00002000 - 0x0000201F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>JTAG</slaveDescriptor>

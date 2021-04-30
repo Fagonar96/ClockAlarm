@@ -1,12 +1,12 @@
-# system info system_tb on 2021.04.28.23:16:11
+# system info system_tb on 2021.04.29.22:28:43
 system_info:
 name,value
 DEVICE,5CEBA2F17A7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1619673358
+GENERATION_ID,1619756910
 #
 #
-# Files generated for system_tb on 2021.04.28.23:16:11
+# Files generated for system_tb on 2021.04.29.22:28:43
 files:
 filepath,kind,attributes,module,is_top
 system/testbench/system_tb/simulation/system_tb.v,VERILOG,,system_tb,true
@@ -19,9 +19,9 @@ system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG
 system/testbench/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv,SYSTEM_VERILOG,,altera_conduit_bfm_0002,false
 system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_reset_source,false
 system/testbench/system_tb/simulation/submodules/altera_avalon_reset_source.sv,SYSTEM_VERILOG,,altera_avalon_reset_source,false
+system/testbench/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v,VERILOG,,system_CONFIRM_BUTTON,false
 system/testbench/system_tb/simulation/submodules/system_CPU.v,VERILOG,,system_CPU,false
 system/testbench/system_tb/simulation/submodules/system_HOUR_1.v,VERILOG,,system_HOUR_1,false
-system/testbench/system_tb/simulation/submodules/system_INC_HOUR_BUTTON.v,VERILOG,,system_INC_HOUR_BUTTON,false
 system/testbench/system_tb/simulation/submodules/system_JTAG.v,VERILOG,,system_JTAG,false
 system/testbench/system_tb/simulation/submodules/system_RAM.hex,HEX,,system_RAM,false
 system/testbench/system_tb/simulation/submodules/system_RAM.v,VERILOG,,system_RAM,false
@@ -76,6 +76,10 @@ system/testbench/system_tb/simulation/submodules/system_mm_interconnect_0_avalon
 instances:
 instancePath,module
 system_tb.system_inst,system
+system_tb.system_inst.CONFIRM_BUTTON,system_CONFIRM_BUTTON
+system_tb.system_inst.INC_HOUR_BUTTON,system_CONFIRM_BUTTON
+system_tb.system_inst.INC_MIN_BUTTON,system_CONFIRM_BUTTON
+system_tb.system_inst.SET_MODE_BUTTON,system_CONFIRM_BUTTON
 system_tb.system_inst.CPU,system_CPU
 system_tb.system_inst.CPU.cpu,system_CPU_cpu
 system_tb.system_inst.HOUR_1,system_HOUR_1
@@ -85,10 +89,6 @@ system_tb.system_inst.MIN_1,system_HOUR_1
 system_tb.system_inst.MIN_2,system_HOUR_1
 system_tb.system_inst.SEC_1,system_HOUR_1
 system_tb.system_inst.SEC_2,system_HOUR_1
-system_tb.system_inst.INC_HOUR_BUTTON,system_INC_HOUR_BUTTON
-system_tb.system_inst.INC_MIN_BUTTON,system_INC_HOUR_BUTTON
-system_tb.system_inst.INC_SEC_BUTTON,system_INC_HOUR_BUTTON
-system_tb.system_inst.SET_MODE_BUTTON,system_INC_HOUR_BUTTON
 system_tb.system_inst.JTAG,system_JTAG
 system_tb.system_inst.RAM,system_RAM
 system_tb.system_inst.TIMER,system_TIMER
@@ -102,7 +102,7 @@ system_tb.system_inst.mm_interconnect_0.LEDs_s1_translator,altera_merlin_slave_t
 system_tb.system_inst.mm_interconnect_0.SET_MODE_BUTTON_s1_translator,altera_merlin_slave_translator
 system_tb.system_inst.mm_interconnect_0.INC_HOUR_BUTTON_s1_translator,altera_merlin_slave_translator
 system_tb.system_inst.mm_interconnect_0.INC_MIN_BUTTON_s1_translator,altera_merlin_slave_translator
-system_tb.system_inst.mm_interconnect_0.INC_SEC_BUTTON_s1_translator,altera_merlin_slave_translator
+system_tb.system_inst.mm_interconnect_0.CONFIRM_BUTTON_s1_translator,altera_merlin_slave_translator
 system_tb.system_inst.mm_interconnect_0.HOUR_1_s1_translator,altera_merlin_slave_translator
 system_tb.system_inst.mm_interconnect_0.HOUR_2_s1_translator,altera_merlin_slave_translator
 system_tb.system_inst.mm_interconnect_0.MIN_1_s1_translator,altera_merlin_slave_translator
@@ -119,7 +119,7 @@ system_tb.system_inst.mm_interconnect_0.LEDs_s1_agent,altera_merlin_slave_agent
 system_tb.system_inst.mm_interconnect_0.SET_MODE_BUTTON_s1_agent,altera_merlin_slave_agent
 system_tb.system_inst.mm_interconnect_0.INC_HOUR_BUTTON_s1_agent,altera_merlin_slave_agent
 system_tb.system_inst.mm_interconnect_0.INC_MIN_BUTTON_s1_agent,altera_merlin_slave_agent
-system_tb.system_inst.mm_interconnect_0.INC_SEC_BUTTON_s1_agent,altera_merlin_slave_agent
+system_tb.system_inst.mm_interconnect_0.CONFIRM_BUTTON_s1_agent,altera_merlin_slave_agent
 system_tb.system_inst.mm_interconnect_0.HOUR_1_s1_agent,altera_merlin_slave_agent
 system_tb.system_inst.mm_interconnect_0.HOUR_2_s1_agent,altera_merlin_slave_agent
 system_tb.system_inst.mm_interconnect_0.MIN_1_s1_agent,altera_merlin_slave_agent
@@ -134,7 +134,7 @@ system_tb.system_inst.mm_interconnect_0.LEDs_s1_agent_rsp_fifo,altera_avalon_sc_
 system_tb.system_inst.mm_interconnect_0.SET_MODE_BUTTON_s1_agent_rsp_fifo,altera_avalon_sc_fifo
 system_tb.system_inst.mm_interconnect_0.INC_HOUR_BUTTON_s1_agent_rsp_fifo,altera_avalon_sc_fifo
 system_tb.system_inst.mm_interconnect_0.INC_MIN_BUTTON_s1_agent_rsp_fifo,altera_avalon_sc_fifo
-system_tb.system_inst.mm_interconnect_0.INC_SEC_BUTTON_s1_agent_rsp_fifo,altera_avalon_sc_fifo
+system_tb.system_inst.mm_interconnect_0.CONFIRM_BUTTON_s1_agent_rsp_fifo,altera_avalon_sc_fifo
 system_tb.system_inst.mm_interconnect_0.HOUR_1_s1_agent_rsp_fifo,altera_avalon_sc_fifo
 system_tb.system_inst.mm_interconnect_0.HOUR_2_s1_agent_rsp_fifo,altera_avalon_sc_fifo
 system_tb.system_inst.mm_interconnect_0.MIN_1_s1_agent_rsp_fifo,altera_avalon_sc_fifo
@@ -226,15 +226,15 @@ system_tb.system_inst.mm_interconnect_0.avalon_st_adapter_014.error_adapter_0,sy
 system_tb.system_inst.irq_mapper,system_irq_mapper
 system_tb.system_inst.rst_controller,altera_reset_controller
 system_tb.system_inst_clk_bfm,altera_avalon_clock_source
-system_tb.system_inst_hour_1_bfm,altera_conduit_bfm
-system_tb.system_inst_hour_2_bfm,altera_conduit_bfm
-system_tb.system_inst_leds_bfm,altera_conduit_bfm
-system_tb.system_inst_min_1_bfm,altera_conduit_bfm
-system_tb.system_inst_min_2_bfm,altera_conduit_bfm
-system_tb.system_inst_sec_1_bfm,altera_conduit_bfm
-system_tb.system_inst_sec_2_bfm,altera_conduit_bfm
-system_tb.system_inst_inc_hour_button_bfm,altera_conduit_bfm_0002
-system_tb.system_inst_inc_min_button_bfm,altera_conduit_bfm_0002
-system_tb.system_inst_inc_sec_button_bfm,altera_conduit_bfm_0002
-system_tb.system_inst_set_mode_button_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_confirm_button_bfm,altera_conduit_bfm
+system_tb.system_inst_inc_hour_button_bfm,altera_conduit_bfm
+system_tb.system_inst_inc_min_button_bfm,altera_conduit_bfm
+system_tb.system_inst_set_mode_button_bfm,altera_conduit_bfm
+system_tb.system_inst_hour_1_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_hour_2_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_leds_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_min_1_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_min_2_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_sec_1_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_sec_2_bfm,altera_conduit_bfm_0002
 system_tb.system_inst_reset_bfm,altera_avalon_reset_source

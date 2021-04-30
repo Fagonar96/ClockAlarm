@@ -29,12 +29,12 @@ mm_interconnect_0:                     ./libraries/mm_interconnect_0/
 TIMER:                                 ./libraries/TIMER/                                
 RAM:                                   ./libraries/RAM/                                  
 JTAG:                                  ./libraries/JTAG/                                 
-INC_HOUR_BUTTON:                       ./libraries/INC_HOUR_BUTTON/                      
 HOUR_1:                                ./libraries/HOUR_1/                               
 CPU:                                   ./libraries/CPU/                                  
+CONFIRM_BUTTON:                        ./libraries/CONFIRM_BUTTON/                       
 system_inst_reset_bfm:                 ./libraries/system_inst_reset_bfm/                
-system_inst_inc_hour_button_bfm:       ./libraries/system_inst_inc_hour_button_bfm/      
 system_inst_hour_1_bfm:                ./libraries/system_inst_hour_1_bfm/               
+system_inst_confirm_button_bfm:        ./libraries/system_inst_confirm_button_bfm/       
 system_inst_clk_bfm:                   ./libraries/system_inst_clk_bfm/                  
 system_inst:                           ./libraries/system_inst/                          
 altera_ver:                            ./libraries/altera_ver/                           

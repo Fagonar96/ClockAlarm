@@ -206,7 +206,7 @@ module system_mm_interconnect_0_router_001
     // ( 0x2800 .. 0x3000 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 14'h2800   ) begin
             src_channel = 15'b0010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x3018 .. 0x3020 )

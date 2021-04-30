@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 19.1 670 win32 2021.04.28.23:16:11
+# ACDS 19.1 670 win32 2021.04.29.22:28:43
 
 # ----------------------------------------
 # Initialize variables
@@ -232,18 +232,18 @@ ensure_lib                                       ./libraries/RAM/
 vmap       RAM                                   ./libraries/RAM/                                  
 ensure_lib                                       ./libraries/JTAG/                                 
 vmap       JTAG                                  ./libraries/JTAG/                                 
-ensure_lib                                       ./libraries/INC_HOUR_BUTTON/                      
-vmap       INC_HOUR_BUTTON                       ./libraries/INC_HOUR_BUTTON/                      
 ensure_lib                                       ./libraries/HOUR_1/                               
 vmap       HOUR_1                                ./libraries/HOUR_1/                               
 ensure_lib                                       ./libraries/CPU/                                  
 vmap       CPU                                   ./libraries/CPU/                                  
+ensure_lib                                       ./libraries/CONFIRM_BUTTON/                       
+vmap       CONFIRM_BUTTON                        ./libraries/CONFIRM_BUTTON/                       
 ensure_lib                                       ./libraries/system_inst_reset_bfm/                
 vmap       system_inst_reset_bfm                 ./libraries/system_inst_reset_bfm/                
-ensure_lib                                       ./libraries/system_inst_inc_hour_button_bfm/      
-vmap       system_inst_inc_hour_button_bfm       ./libraries/system_inst_inc_hour_button_bfm/      
 ensure_lib                                       ./libraries/system_inst_hour_1_bfm/               
 vmap       system_inst_hour_1_bfm                ./libraries/system_inst_hour_1_bfm/               
+ensure_lib                                       ./libraries/system_inst_confirm_button_bfm/       
+vmap       system_inst_confirm_button_bfm        ./libraries/system_inst_confirm_button_bfm/       
 ensure_lib                                       ./libraries/system_inst_clk_bfm/                  
 vmap       system_inst_clk_bfm                   ./libraries/system_inst_clk_bfm/                  
 ensure_lib                                       ./libraries/system_inst/                          
@@ -310,12 +310,12 @@ alias com {
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_TIMER.v"                                                                             -work TIMER                                
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.v"                                                                               -work RAM                                  
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_JTAG.v"                                                                              -work JTAG                                 
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_INC_HOUR_BUTTON.v"                                                                   -work INC_HOUR_BUTTON                      
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_HOUR_1.v"                                                                            -work HOUR_1                               
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU.v"                                                                               -work CPU                                  
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v"                                                                    -work CONFIRM_BUTTON                       
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_reset_source.sv"                                 -L altera_common_sv_packages -work system_inst_reset_bfm                
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                    -L altera_common_sv_packages -work system_inst_inc_hour_button_bfm      
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm.sv"                                         -L altera_common_sv_packages -work system_inst_hour_1_bfm               
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                    -L altera_common_sv_packages -work system_inst_hour_1_bfm               
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm.sv"                                         -L altera_common_sv_packages -work system_inst_confirm_button_bfm       
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_clock_source.sv"                                 -L altera_common_sv_packages -work system_inst_clk_bfm                  
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system.v"                                                                                   -work system_inst                          
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/system_tb.v"                                                                                                                                      
@@ -325,14 +325,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_003 -L rsp_demux -L cmd_mux_003 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_005 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L CPU_data_master_agent -L JTAG_avalon_jtag_slave_translator -L CPU_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L RAM -L JTAG -L INC_HOUR_BUTTON -L HOUR_1 -L CPU -L system_inst_reset_bfm -L system_inst_inc_hour_button_bfm -L system_inst_hour_1_bfm -L system_inst_clk_bfm -L system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_003 -L rsp_demux -L cmd_mux_003 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_005 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L CPU_data_master_agent -L JTAG_avalon_jtag_slave_translator -L CPU_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L RAM -L JTAG -L HOUR_1 -L CPU -L CONFIRM_BUTTON -L system_inst_reset_bfm -L system_inst_hour_1_bfm -L system_inst_confirm_button_bfm -L system_inst_clk_bfm -L system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with novopt option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_003 -L rsp_demux -L cmd_mux_003 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_005 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L CPU_data_master_agent -L JTAG_avalon_jtag_slave_translator -L CPU_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L RAM -L JTAG -L INC_HOUR_BUTTON -L HOUR_1 -L CPU -L system_inst_reset_bfm -L system_inst_inc_hour_button_bfm -L system_inst_hour_1_bfm -L system_inst_clk_bfm -L system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_003 -L rsp_demux -L cmd_mux_003 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_005 -L router_002 -L router_001 -L router -L JTAG_avalon_jtag_slave_agent_rsp_fifo -L JTAG_avalon_jtag_slave_agent -L CPU_data_master_agent -L JTAG_avalon_jtag_slave_translator -L CPU_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L TIMER -L RAM -L JTAG -L HOUR_1 -L CPU -L CONFIRM_BUTTON -L system_inst_reset_bfm -L system_inst_hour_1_bfm -L system_inst_confirm_button_bfm -L system_inst_clk_bfm -L system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

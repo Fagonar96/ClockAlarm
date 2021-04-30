@@ -1,10 +1,12 @@
 Info: Starting: Create testbench Platform Designer system
-Info: E:/Quartus/system/testbench/system.ipx
-Info: qsys-generate E:\Quartus\system.qsys --testbench=STANDARD --output-directory=E:\Quartus --family="Cyclone V" --part=5CEBA2F17A7
-Progress: Loading Quartus/system.qsys
+Info: E:/ClockAlarm/system/testbench/system.ipx
+Info: qsys-generate E:\ClockAlarm\system.qsys --testbench=STANDARD --output-directory=E:\ClockAlarm --family="Cyclone V" --part=5CEBA2F17A7
+Progress: Loading ClockAlarm/system.qsys
 Progress: Reading input file
 Progress: Adding CLK [clock_source 19.1]
 Progress: Parameterizing module CLK
+Progress: Adding CONFIRM_BUTTON [altera_avalon_pio 19.1]
+Progress: Parameterizing module CONFIRM_BUTTON
 Progress: Adding CPU [altera_nios2_gen2 19.1]
 Progress: Parameterizing module CPU
 Progress: Adding HOUR_1 [altera_avalon_pio 19.1]
@@ -15,8 +17,6 @@ Progress: Adding INC_HOUR_BUTTON [altera_avalon_pio 19.1]
 Progress: Parameterizing module INC_HOUR_BUTTON
 Progress: Adding INC_MIN_BUTTON [altera_avalon_pio 19.1]
 Progress: Parameterizing module INC_MIN_BUTTON
-Progress: Adding INC_SEC_BUTTON [altera_avalon_pio 19.1]
-Progress: Parameterizing module INC_SEC_BUTTON
 Progress: Adding JTAG [altera_avalon_jtag_uart 19.1]
 Progress: Parameterizing module JTAG
 Progress: Adding LEDs [altera_avalon_pio 19.1]
@@ -39,9 +39,9 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Info: system.CONFIRM_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system.INC_HOUR_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system.INC_MIN_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: system.INC_SEC_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system.JTAG: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: system.SET_MODE_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: qsys-generate succeeded.
@@ -55,16 +55,16 @@ Info: E:\intelfpga_lite\19.1\quartus\sopc_builder\bin\root_components.ipx: Loadi
 Info: Reading index E:\intelfpga_lite\19.1\quartus\sopc_builder\bin\ip_component_categories.ipx
 Info: E:\intelfpga_lite\19.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
 Info: E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
-Info: E:/Quartus/system/testbench/ip/**/* matched 0 files in 0.00 seconds
-Info: Reading index E:\Quartus\system\testbench\system.ipx
-Progress: Loading Quartus/system.qsys
-Info: E:/Quartus/* matched 7 files in 0.00 seconds
-Info: E:/Quartus/ip/**/* matched 0 files in 0.00 seconds
-Info: E:/Quartus/*/* matched 16 files in 0.00 seconds
-Info: E:\Quartus\system\testbench\system.ipx described 0 plugins, 3 paths, in 0.00 seconds
+Info: E:/ClockAlarm/system/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index E:\ClockAlarm\system\testbench\system.ipx
+Progress: Loading ClockAlarm/system.qsys
+Info: E:/ClockAlarm/* matched 10 files in 0.00 seconds
+Info: E:/ClockAlarm/ip/**/* matched 0 files in 0.00 seconds
+Info: E:/ClockAlarm/*/* matched 29 files in 0.00 seconds
+Info: E:\ClockAlarm\system\testbench\system.ipx described 0 plugins, 3 paths, in 0.00 seconds
 Progress: Loading testbench/system_tb.qsys
-Info: E:/Quartus/system/testbench/* matched 12 files in 0.00 seconds
-Info: E:/Quartus/system/testbench/*/* matched 9 files in 0.00 seconds
+Info: E:/ClockAlarm/system/testbench/* matched 12 files in 0.00 seconds
+Info: E:/ClockAlarm/system/testbench/*/* matched 9 files in 0.00 seconds
 Info: C:/Users/fagon/.altera.quartus/ip/19.1/**/* matched 0 files in 0.00 seconds
 Info: E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
 Info: E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
@@ -94,6 +94,9 @@ Info: get_connections
 Info: get_interface_property clk EXPORT_OF
 Info: get_instance_property CLK CLASS_NAME
 Info: get_instance_assignment CLK testbench.partner.map.clk_in
+Info: get_interface_property confirm_button EXPORT_OF
+Info: get_instance_property CONFIRM_BUTTON CLASS_NAME
+Info: get_instance_assignment CONFIRM_BUTTON testbench.partner.map.external_connection
 Info: get_interface_property hour_1 EXPORT_OF
 Info: get_instance_property HOUR_1 CLASS_NAME
 Info: get_instance_assignment HOUR_1 testbench.partner.map.external_connection
@@ -106,9 +109,6 @@ Info: get_instance_assignment INC_HOUR_BUTTON testbench.partner.map.external_con
 Info: get_interface_property inc_min_button EXPORT_OF
 Info: get_instance_property INC_MIN_BUTTON CLASS_NAME
 Info: get_instance_assignment INC_MIN_BUTTON testbench.partner.map.external_connection
-Info: get_interface_property inc_sec_button EXPORT_OF
-Info: get_instance_property INC_SEC_BUTTON CLASS_NAME
-Info: get_instance_assignment INC_SEC_BUTTON testbench.partner.map.external_connection
 Info: get_interface_property leds EXPORT_OF
 Info: get_instance_property LEDs CLASS_NAME
 Info: get_instance_assignment LEDs testbench.partner.map.external_connection
@@ -137,11 +137,11 @@ Info: add_instance system_inst system
 Info: set_use_testbench_naming_pattern true system
 Info: get_instance_interfaces system_inst
 Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: get_instance_interface_property system_inst confirm_button CLASS_NAME
 Info: get_instance_interface_property system_inst hour_1 CLASS_NAME
 Info: get_instance_interface_property system_inst hour_2 CLASS_NAME
 Info: get_instance_interface_property system_inst inc_hour_button CLASS_NAME
 Info: get_instance_interface_property system_inst inc_min_button CLASS_NAME
-Info: get_instance_interface_property system_inst inc_sec_button CLASS_NAME
 Info: get_instance_interface_property system_inst leds CLASS_NAME
 Info: get_instance_interface_property system_inst min_1 CLASS_NAME
 Info: get_instance_interface_property system_inst min_2 CLASS_NAME
@@ -190,6 +190,28 @@ Info: get_instance_interfaces system_inst_reset_bfm
 Info: get_instance_interface_property system_inst_reset_bfm clk CLASS_NAME
 Info: get_instance_interface_property system_inst_reset_bfm reset CLASS_NAME
 Info: add_connection system_inst_reset_bfm.reset system_inst.reset
+Info: get_instance_interface_property system_inst confirm_button CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: confirm_button
+Info: TB_Gen: conduit_end found: confirm_button
+Info: get_instance_interface_property system_inst confirm_button CLASS_NAME
+Info: add_instance system_inst_confirm_button_bfm altera_conduit_bfm 
+Info: get_instance_property system_inst_confirm_button_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst confirm_button associatedClock
+Info: get_instance_interface_parameter_value system_inst confirm_button associatedReset
+Info: get_instance_interface_ports system_inst confirm_button
+Info: get_instance_interface_port_property system_inst confirm_button confirm_button_export ROLE
+Info: get_instance_interface_port_property system_inst confirm_button confirm_button_export WIDTH
+Info: get_instance_interface_port_property system_inst confirm_button confirm_button_export DIRECTION
+Info: set_instance_parameter_value system_inst_confirm_button_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value system_inst_confirm_button_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value system_inst_confirm_button_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value system_inst_confirm_button_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value system_inst_confirm_button_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property system_inst_confirm_button_bfm CLASS_NAME
+Info: get_instance_interface_property system_inst confirm_button CLASS_NAME
+Info: get_instance_interfaces system_inst_confirm_button_bfm
+Info: get_instance_interface_property system_inst_confirm_button_bfm conduit CLASS_NAME
+Info: add_connection system_inst_confirm_button_bfm.conduit system_inst.confirm_button
 Info: get_instance_interface_property system_inst hour_1 CLASS_NAME
 Info: send_message Info TB_Gen: conduit_end found: hour_1
 Info: TB_Gen: conduit_end found: hour_1
@@ -249,7 +271,7 @@ Info: get_instance_interface_port_property system_inst inc_hour_button inc_hour_
 Info: set_instance_parameter_value system_inst_inc_hour_button_bfm CLOCKED_SIGNAL 0
 Info: set_instance_parameter_value system_inst_inc_hour_button_bfm ENABLE_RESET 0
 Info: set_instance_parameter_value system_inst_inc_hour_button_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value system_inst_inc_hour_button_bfm SIGNAL_WIDTHS 8
+Info: set_instance_parameter_value system_inst_inc_hour_button_bfm SIGNAL_WIDTHS 1
 Info: set_instance_parameter_value system_inst_inc_hour_button_bfm SIGNAL_DIRECTIONS output
 Info: get_instance_property system_inst_inc_hour_button_bfm CLASS_NAME
 Info: get_instance_interface_property system_inst inc_hour_button CLASS_NAME
@@ -271,35 +293,13 @@ Info: get_instance_interface_port_property system_inst inc_min_button inc_min_bu
 Info: set_instance_parameter_value system_inst_inc_min_button_bfm CLOCKED_SIGNAL 0
 Info: set_instance_parameter_value system_inst_inc_min_button_bfm ENABLE_RESET 0
 Info: set_instance_parameter_value system_inst_inc_min_button_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value system_inst_inc_min_button_bfm SIGNAL_WIDTHS 8
+Info: set_instance_parameter_value system_inst_inc_min_button_bfm SIGNAL_WIDTHS 1
 Info: set_instance_parameter_value system_inst_inc_min_button_bfm SIGNAL_DIRECTIONS output
 Info: get_instance_property system_inst_inc_min_button_bfm CLASS_NAME
 Info: get_instance_interface_property system_inst inc_min_button CLASS_NAME
 Info: get_instance_interfaces system_inst_inc_min_button_bfm
 Info: get_instance_interface_property system_inst_inc_min_button_bfm conduit CLASS_NAME
 Info: add_connection system_inst_inc_min_button_bfm.conduit system_inst.inc_min_button
-Info: get_instance_interface_property system_inst inc_sec_button CLASS_NAME
-Info: send_message Info TB_Gen: conduit_end found: inc_sec_button
-Info: TB_Gen: conduit_end found: inc_sec_button
-Info: get_instance_interface_property system_inst inc_sec_button CLASS_NAME
-Info: add_instance system_inst_inc_sec_button_bfm altera_conduit_bfm 
-Info: get_instance_property system_inst_inc_sec_button_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value system_inst inc_sec_button associatedClock
-Info: get_instance_interface_parameter_value system_inst inc_sec_button associatedReset
-Info: get_instance_interface_ports system_inst inc_sec_button
-Info: get_instance_interface_port_property system_inst inc_sec_button inc_sec_button_export ROLE
-Info: get_instance_interface_port_property system_inst inc_sec_button inc_sec_button_export WIDTH
-Info: get_instance_interface_port_property system_inst inc_sec_button inc_sec_button_export DIRECTION
-Info: set_instance_parameter_value system_inst_inc_sec_button_bfm CLOCKED_SIGNAL 0
-Info: set_instance_parameter_value system_inst_inc_sec_button_bfm ENABLE_RESET 0
-Info: set_instance_parameter_value system_inst_inc_sec_button_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value system_inst_inc_sec_button_bfm SIGNAL_WIDTHS 8
-Info: set_instance_parameter_value system_inst_inc_sec_button_bfm SIGNAL_DIRECTIONS output
-Info: get_instance_property system_inst_inc_sec_button_bfm CLASS_NAME
-Info: get_instance_interface_property system_inst inc_sec_button CLASS_NAME
-Info: get_instance_interfaces system_inst_inc_sec_button_bfm
-Info: get_instance_interface_property system_inst_inc_sec_button_bfm conduit CLASS_NAME
-Info: add_connection system_inst_inc_sec_button_bfm.conduit system_inst.inc_sec_button
 Info: get_instance_interface_property system_inst leds CLASS_NAME
 Info: send_message Info TB_Gen: conduit_end found: leds
 Info: TB_Gen: conduit_end found: leds
@@ -425,7 +425,7 @@ Info: get_instance_interface_port_property system_inst set_mode_button set_mode_
 Info: set_instance_parameter_value system_inst_set_mode_button_bfm CLOCKED_SIGNAL 0
 Info: set_instance_parameter_value system_inst_set_mode_button_bfm ENABLE_RESET 0
 Info: set_instance_parameter_value system_inst_set_mode_button_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value system_inst_set_mode_button_bfm SIGNAL_WIDTHS 8
+Info: set_instance_parameter_value system_inst_set_mode_button_bfm SIGNAL_WIDTHS 1
 Info: set_instance_parameter_value system_inst_set_mode_button_bfm SIGNAL_DIRECTIONS output
 Info: get_instance_property system_inst_set_mode_button_bfm CLASS_NAME
 Info: get_instance_interface_property system_inst set_mode_button CLASS_NAME
@@ -437,15 +437,17 @@ Info: TB_Gen: Saving testbench system: system_tb.qsys
 Info: save_system system_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: E:/Quartus/system/testbench/system_tb.qsys
+Info: Testbench system: E:/ClockAlarm/system/testbench/system_tb.qsys
 Info: Done
-Info: qsys-generate E:\Quartus\system.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=E:\Quartus\system\testbench\system_tb\simulation --family="Cyclone V" --part=5CEBA2F17A7
+Info: qsys-generate E:\ClockAlarm\system.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=E:\ClockAlarm\system\testbench\system_tb\simulation --family="Cyclone V" --part=5CEBA2F17A7
 Progress: Loading testbench/system_tb.qsys
 Progress: Reading input file
 Progress: Adding system_inst [system 1.0]
 Progress: Parameterizing module system_inst
 Progress: Adding system_inst_clk_bfm [altera_avalon_clock_source 19.1]
 Progress: Parameterizing module system_inst_clk_bfm
+Progress: Adding system_inst_confirm_button_bfm [altera_conduit_bfm 19.1]
+Progress: Parameterizing module system_inst_confirm_button_bfm
 Progress: Adding system_inst_hour_1_bfm [altera_conduit_bfm 19.1]
 Progress: Parameterizing module system_inst_hour_1_bfm
 Progress: Adding system_inst_hour_2_bfm [altera_conduit_bfm 19.1]
@@ -454,8 +456,6 @@ Progress: Adding system_inst_inc_hour_button_bfm [altera_conduit_bfm 19.1]
 Progress: Parameterizing module system_inst_inc_hour_button_bfm
 Progress: Adding system_inst_inc_min_button_bfm [altera_conduit_bfm 19.1]
 Progress: Parameterizing module system_inst_inc_min_button_bfm
-Progress: Adding system_inst_inc_sec_button_bfm [altera_conduit_bfm 19.1]
-Progress: Parameterizing module system_inst_inc_sec_button_bfm
 Progress: Adding system_inst_leds_bfm [altera_conduit_bfm 19.1]
 Progress: Parameterizing module system_inst_leds_bfm
 Progress: Adding system_inst_min_1_bfm [altera_conduit_bfm 19.1]
@@ -474,9 +474,9 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Info: system_tb.system_inst.CONFIRM_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system_tb.system_inst.INC_HOUR_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system_tb.system_inst.INC_MIN_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: system_tb.system_inst.INC_SEC_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system_tb.system_inst.JTAG: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: system_tb.system_inst.SET_MODE_BUTTON: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system_tb.system_inst_clk_bfm: Elaborate: altera_clock_source
@@ -489,31 +489,31 @@ Info: system_tb.system_inst_reset_bfm: Reset is negatively asserted.
 Info: system_tb: Generating system_tb "system_tb" for SIM_VERILOG
 Info: system_inst: "system_tb" instantiated system "system_inst"
 Info: system_inst_clk_bfm: "system_tb" instantiated altera_avalon_clock_source "system_inst_clk_bfm"
+Info: system_inst_confirm_button_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_confirm_button_bfm"
+Info: Reusing file E:/ClockAlarm/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
 Info: system_inst_hour_1_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_hour_1_bfm"
-Info: Reusing file E:/Quartus/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
-Info: system_inst_inc_hour_button_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_inc_hour_button_bfm"
-Info: Reusing file E:/Quartus/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file E:/ClockAlarm/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
 Info: system_inst_reset_bfm: "system_tb" instantiated altera_avalon_reset_source "system_inst_reset_bfm"
-Info: Reusing file E:/Quartus/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file E:/ClockAlarm/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: CONFIRM_BUTTON: Starting RTL generation for module 'system_CONFIRM_BUTTON'
+Info: CONFIRM_BUTTON:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_CONFIRM_BUTTON --dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0138_CONFIRM_BUTTON_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0138_CONFIRM_BUTTON_gen//system_CONFIRM_BUTTON_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0138_CONFIRM_BUTTON_gen/  ]
+Info: CONFIRM_BUTTON: Done RTL generation for module 'system_CONFIRM_BUTTON'
+Info: CONFIRM_BUTTON: "system_inst" instantiated altera_avalon_pio "CONFIRM_BUTTON"
 Info: CPU: "system_inst" instantiated altera_nios2_gen2 "CPU"
 Info: HOUR_1: Starting RTL generation for module 'system_HOUR_1'
-Info: HOUR_1:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_HOUR_1 --dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0091_HOUR_1_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0091_HOUR_1_gen//system_HOUR_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0091_HOUR_1_gen/  ]
+Info: HOUR_1:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_HOUR_1 --dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0139_HOUR_1_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0139_HOUR_1_gen//system_HOUR_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0139_HOUR_1_gen/  ]
 Info: HOUR_1: Done RTL generation for module 'system_HOUR_1'
 Info: HOUR_1: "system_inst" instantiated altera_avalon_pio "HOUR_1"
-Info: INC_HOUR_BUTTON: Starting RTL generation for module 'system_INC_HOUR_BUTTON'
-Info: INC_HOUR_BUTTON:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_INC_HOUR_BUTTON --dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0092_INC_HOUR_BUTTON_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0092_INC_HOUR_BUTTON_gen//system_INC_HOUR_BUTTON_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0092_INC_HOUR_BUTTON_gen/  ]
-Info: INC_HOUR_BUTTON: Done RTL generation for module 'system_INC_HOUR_BUTTON'
-Info: INC_HOUR_BUTTON: "system_inst" instantiated altera_avalon_pio "INC_HOUR_BUTTON"
 Info: JTAG: Starting RTL generation for module 'system_JTAG'
-Info: JTAG:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_JTAG --dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0093_JTAG_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0093_JTAG_gen//system_JTAG_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0093_JTAG_gen/  ]
+Info: JTAG:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_JTAG --dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0140_JTAG_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0140_JTAG_gen//system_JTAG_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0140_JTAG_gen/  ]
 Info: JTAG: Done RTL generation for module 'system_JTAG'
 Info: JTAG: "system_inst" instantiated altera_avalon_jtag_uart "JTAG"
 Info: RAM: Starting RTL generation for module 'system_RAM'
-Info: RAM:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0094_RAM_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0094_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0094_RAM_gen/  ]
+Info: RAM:   Generation command is [exec E:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0141_RAM_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0141_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0141_RAM_gen/  ]
 Info: RAM: Done RTL generation for module 'system_RAM'
 Info: RAM: "system_inst" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: TIMER: Starting RTL generation for module 'system_TIMER'
-Info: TIMER:   Generation command is [exec E:/intelFPGA_lite/19.1/quartus/bin64//perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=system_TIMER --dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0095_TIMER_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0095_TIMER_gen//system_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0095_TIMER_gen/  ]
+Info: TIMER:   Generation command is [exec E:/intelFPGA_lite/19.1/quartus/bin64//perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- E:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=system_TIMER --dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0142_TIMER_gen/ --quartus_dir=E:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0142_TIMER_gen//system_TIMER_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0142_TIMER_gen/  ]
 Info: TIMER: Done RTL generation for module 'system_TIMER'
 Info: TIMER: "system_inst" instantiated altera_avalon_timer "TIMER"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -535,14 +535,14 @@ Info: mm_interconnect_0: "system_inst" instantiated altera_mm_interconnect "mm_i
 Info: irq_mapper: "system_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "system_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'system_CPU_cpu'
-Info: cpu:   Generation command is [exec E:/intelFPGA_lite/19.1/quartus/bin64//perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0098_cpu_gen/ --quartus_bindir=E:/intelFPGA_lite/19.1/quartus/bin64/ --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0098_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0098_cpu_gen/  ]
-Info: cpu: # 2021.04.28 23:16:09 (*) Starting Nios II generation
-Info: cpu: # 2021.04.28 23:16:09 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2021.04.28 23:16:09 (*)   Creating all objects for CPU
-Info: cpu: # 2021.04.28 23:16:10 (*)   Creating 'C:/Users/fagon/AppData/Local/Temp/alt8744_8892813901041666220.dir/0098_cpu_gen//system_CPU_cpu_nios2_waves.do'
-Info: cpu: # 2021.04.28 23:16:10 (*)   Generating RTL from CPU objects
-Info: cpu: # 2021.04.28 23:16:10 (*)   Creating plain-text RTL
-Info: cpu: # 2021.04.28 23:16:10 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec E:/intelFPGA_lite/19.1/quartus/bin64//perl/bin/perl.exe -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I E:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- E:/intelfpga_lite/19.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0145_cpu_gen/ --quartus_bindir=E:/intelFPGA_lite/19.1/quartus/bin64/ --verilog --config=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0145_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0145_cpu_gen/  ]
+Info: cpu: # 2021.04.29 22:28:41 (*) Starting Nios II generation
+Info: cpu: # 2021.04.29 22:28:41 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.04.29 22:28:41 (*)   Creating all objects for CPU
+Info: cpu: # 2021.04.29 22:28:42 (*)   Creating 'C:/Users/fagon/AppData/Local/Temp/alt8747_6136024383194767440.dir/0145_cpu_gen//system_CPU_cpu_nios2_waves.do'
+Info: cpu: # 2021.04.29 22:28:42 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.04.29 22:28:42 (*)   Creating plain-text RTL
+Info: cpu: # 2021.04.29 22:28:42 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'system_CPU_cpu'
 Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
 Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
@@ -558,33 +558,33 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
-Info: Reusing file E:/Quartus/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file E:/ClockAlarm/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_003"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file E:/Quartus/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file E:/ClockAlarm/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file E:/Quartus/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file E:/ClockAlarm/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: system_tb: Done "system_tb" with 35 modules, 56 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=E:\Quartus\system_tb.spd --output-directory=E:/Quartus/system/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=E:\Quartus\system_tb.spd --output-directory=E:/Quartus/system/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in E:/Quartus/system/testbench/ directory:
+Info: sim-script-gen --spd=E:\ClockAlarm\system_tb.spd --output-directory=E:/ClockAlarm/system/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=E:\ClockAlarm\system_tb.spd --output-directory=E:/ClockAlarm/system/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in E:/ClockAlarm/system/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in E:/Quartus/system/testbench/ directory:
+Info: Generating the following file(s) for VCS simulator in E:/ClockAlarm/system/testbench/ directory:
 Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in E:/Quartus/system/testbench/ directory:
+Info: Generating the following file(s) for VCSMX simulator in E:/ClockAlarm/system/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in E:/Quartus/system/testbench/ directory:
+Info: Generating the following file(s) for NCSIM simulator in E:/ClockAlarm/system/testbench/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
 Info: 	35 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in E:/Quartus/system/testbench/ directory:
+Info: Generating the following file(s) for RIVIERA simulator in E:/ClockAlarm/system/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under E:/Quartus/system/testbench/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under E:/ClockAlarm/system/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

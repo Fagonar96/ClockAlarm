@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'CPU' in SOPC Builder design 'system'
- * SOPC Builder design path: E:/Quartus/system.sopcinfo
+ * SOPC Builder design path: E:/ClockAlarm/system.sopcinfo
  *
- * Generated: Tue Apr 27 18:56:12 CST 2021
+ * Generated: Thu Apr 29 15:31:15 CST 2021
  */
 
 /*
@@ -60,6 +60,7 @@
 
 #include "altera_nios2_gen2_irq.h"
 #include "altera_avalon_jtag_uart.h"
+#include "altera_avalon_timer.h"
 
 /*
  * Allocate the device storage
@@ -67,6 +68,7 @@
 
 ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( CPU, CPU);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG, JTAG);
+ALTERA_AVALON_TIMER_INSTANCE ( TIMER, TIMER);
 
 /*
  * Initialize the interrupt controller devices
@@ -89,5 +91,6 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
+    ALTERA_AVALON_TIMER_INIT ( TIMER, TIMER);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG, JTAG);
 }

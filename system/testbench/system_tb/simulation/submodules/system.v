@@ -5,18 +5,18 @@
 `timescale 1 ps / 1 ps
 module system (
 		input  wire       clk_clk,                //             clk.clk
+		input  wire       confirm_button_export,  //  confirm_button.export
 		output wire [7:0] hour_1_export,          //          hour_1.export
 		output wire [7:0] hour_2_export,          //          hour_2.export
-		input  wire [7:0] inc_hour_button_export, // inc_hour_button.export
-		input  wire [7:0] inc_min_button_export,  //  inc_min_button.export
-		input  wire [7:0] inc_sec_button_export,  //  inc_sec_button.export
+		input  wire       inc_hour_button_export, // inc_hour_button.export
+		input  wire       inc_min_button_export,  //  inc_min_button.export
 		output wire [7:0] leds_export,            //            leds.export
 		output wire [7:0] min_1_export,           //           min_1.export
 		output wire [7:0] min_2_export,           //           min_2.export
 		input  wire       reset_reset_n,          //           reset.reset_n
 		output wire [7:0] sec_1_export,           //           sec_1.export
 		output wire [7:0] sec_2_export,           //           sec_2.export
-		input  wire [7:0] set_mode_button_export  // set_mode_button.export
+		input  wire       set_mode_button_export  // set_mode_button.export
 	);
 
 	wire  [31:0] cpu_data_master_readdata;                             // mm_interconnect_0:CPU_data_master_readdata -> CPU:d_readdata
@@ -73,11 +73,11 @@ module system (
 	wire   [1:0] mm_interconnect_0_inc_min_button_s1_address;          // mm_interconnect_0:INC_MIN_BUTTON_s1_address -> INC_MIN_BUTTON:address
 	wire         mm_interconnect_0_inc_min_button_s1_write;            // mm_interconnect_0:INC_MIN_BUTTON_s1_write -> INC_MIN_BUTTON:write_n
 	wire  [31:0] mm_interconnect_0_inc_min_button_s1_writedata;        // mm_interconnect_0:INC_MIN_BUTTON_s1_writedata -> INC_MIN_BUTTON:writedata
-	wire         mm_interconnect_0_inc_sec_button_s1_chipselect;       // mm_interconnect_0:INC_SEC_BUTTON_s1_chipselect -> INC_SEC_BUTTON:chipselect
-	wire  [31:0] mm_interconnect_0_inc_sec_button_s1_readdata;         // INC_SEC_BUTTON:readdata -> mm_interconnect_0:INC_SEC_BUTTON_s1_readdata
-	wire   [1:0] mm_interconnect_0_inc_sec_button_s1_address;          // mm_interconnect_0:INC_SEC_BUTTON_s1_address -> INC_SEC_BUTTON:address
-	wire         mm_interconnect_0_inc_sec_button_s1_write;            // mm_interconnect_0:INC_SEC_BUTTON_s1_write -> INC_SEC_BUTTON:write_n
-	wire  [31:0] mm_interconnect_0_inc_sec_button_s1_writedata;        // mm_interconnect_0:INC_SEC_BUTTON_s1_writedata -> INC_SEC_BUTTON:writedata
+	wire         mm_interconnect_0_confirm_button_s1_chipselect;       // mm_interconnect_0:CONFIRM_BUTTON_s1_chipselect -> CONFIRM_BUTTON:chipselect
+	wire  [31:0] mm_interconnect_0_confirm_button_s1_readdata;         // CONFIRM_BUTTON:readdata -> mm_interconnect_0:CONFIRM_BUTTON_s1_readdata
+	wire   [1:0] mm_interconnect_0_confirm_button_s1_address;          // mm_interconnect_0:CONFIRM_BUTTON_s1_address -> CONFIRM_BUTTON:address
+	wire         mm_interconnect_0_confirm_button_s1_write;            // mm_interconnect_0:CONFIRM_BUTTON_s1_write -> CONFIRM_BUTTON:write_n
+	wire  [31:0] mm_interconnect_0_confirm_button_s1_writedata;        // mm_interconnect_0:CONFIRM_BUTTON_s1_writedata -> CONFIRM_BUTTON:writedata
 	wire         mm_interconnect_0_hour_1_s1_chipselect;               // mm_interconnect_0:HOUR_1_s1_chipselect -> HOUR_1:chipselect
 	wire  [31:0] mm_interconnect_0_hour_1_s1_readdata;                 // HOUR_1:readdata -> mm_interconnect_0:HOUR_1_s1_readdata
 	wire   [1:0] mm_interconnect_0_hour_1_s1_address;                  // mm_interconnect_0:HOUR_1_s1_address -> HOUR_1:address
@@ -117,11 +117,23 @@ module system (
 	wire         irq_mapper_receiver1_irq;                             // SET_MODE_BUTTON:irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                             // INC_HOUR_BUTTON:irq -> irq_mapper:receiver2_irq
 	wire         irq_mapper_receiver3_irq;                             // INC_MIN_BUTTON:irq -> irq_mapper:receiver3_irq
-	wire         irq_mapper_receiver4_irq;                             // INC_SEC_BUTTON:irq -> irq_mapper:receiver4_irq
+	wire         irq_mapper_receiver4_irq;                             // CONFIRM_BUTTON:irq -> irq_mapper:receiver4_irq
 	wire         irq_mapper_receiver5_irq;                             // TIMER:irq -> irq_mapper:receiver5_irq
 	wire  [31:0] cpu_irq_irq;                                          // irq_mapper:sender_irq -> CPU:irq
-	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [CPU:reset_n, HOUR_1:reset_n, HOUR_2:reset_n, INC_HOUR_BUTTON:reset_n, INC_MIN_BUTTON:reset_n, INC_SEC_BUTTON:reset_n, JTAG:rst_n, LEDs:reset_n, MIN_1:reset_n, MIN_2:reset_n, RAM:reset, SEC_1:reset_n, SEC_2:reset_n, SET_MODE_BUTTON:reset_n, TIMER:reset_n, irq_mapper:reset, mm_interconnect_0:CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [CONFIRM_BUTTON:reset_n, CPU:reset_n, HOUR_1:reset_n, HOUR_2:reset_n, INC_HOUR_BUTTON:reset_n, INC_MIN_BUTTON:reset_n, JTAG:rst_n, LEDs:reset_n, MIN_1:reset_n, MIN_2:reset_n, RAM:reset, SEC_1:reset_n, SEC_2:reset_n, SET_MODE_BUTTON:reset_n, TIMER:reset_n, irq_mapper:reset, mm_interconnect_0:CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                   // rst_controller:reset_req -> [CPU:reset_req, RAM:reset_req, rst_translator:reset_req_in]
+
+	system_CONFIRM_BUTTON confirm_button (
+		.clk        (clk_clk),                                        //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
+		.address    (mm_interconnect_0_confirm_button_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_confirm_button_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_confirm_button_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_confirm_button_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_confirm_button_s1_readdata),   //                    .readdata
+		.in_port    (confirm_button_export),                          // external_connection.export
+		.irq        (irq_mapper_receiver4_irq)                        //                 irq.irq
+	);
 
 	system_CPU cpu (
 		.clk                                 (clk_clk),                                           //                       clk.clk
@@ -174,7 +186,7 @@ module system (
 		.out_port   (hour_2_export)                           // external_connection.export
 	);
 
-	system_INC_HOUR_BUTTON inc_hour_button (
+	system_CONFIRM_BUTTON inc_hour_button (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_0_inc_hour_button_s1_address),    //                  s1.address
@@ -186,7 +198,7 @@ module system (
 		.irq        (irq_mapper_receiver2_irq)                         //                 irq.irq
 	);
 
-	system_INC_HOUR_BUTTON inc_min_button (
+	system_CONFIRM_BUTTON inc_min_button (
 		.clk        (clk_clk),                                        //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
 		.address    (mm_interconnect_0_inc_min_button_s1_address),    //                  s1.address
@@ -196,18 +208,6 @@ module system (
 		.readdata   (mm_interconnect_0_inc_min_button_s1_readdata),   //                    .readdata
 		.in_port    (inc_min_button_export),                          // external_connection.export
 		.irq        (irq_mapper_receiver3_irq)                        //                 irq.irq
-	);
-
-	system_INC_HOUR_BUTTON inc_sec_button (
-		.clk        (clk_clk),                                        //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
-		.address    (mm_interconnect_0_inc_sec_button_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_0_inc_sec_button_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_0_inc_sec_button_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_0_inc_sec_button_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_0_inc_sec_button_s1_readdata),   //                    .readdata
-		.in_port    (inc_sec_button_export),                          // external_connection.export
-		.irq        (irq_mapper_receiver4_irq)                        //                 irq.irq
 	);
 
 	system_JTAG jtag (
@@ -292,7 +292,7 @@ module system (
 		.out_port   (sec_2_export)                           // external_connection.export
 	);
 
-	system_INC_HOUR_BUTTON set_mode_button (
+	system_CONFIRM_BUTTON set_mode_button (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_0_set_mode_button_s1_address),    //                  s1.address
@@ -330,6 +330,11 @@ module system (
 		.CPU_instruction_master_waitrequest    (cpu_instruction_master_waitrequest),                   //                                .waitrequest
 		.CPU_instruction_master_read           (cpu_instruction_master_read),                          //                                .read
 		.CPU_instruction_master_readdata       (cpu_instruction_master_readdata),                      //                                .readdata
+		.CONFIRM_BUTTON_s1_address             (mm_interconnect_0_confirm_button_s1_address),          //               CONFIRM_BUTTON_s1.address
+		.CONFIRM_BUTTON_s1_write               (mm_interconnect_0_confirm_button_s1_write),            //                                .write
+		.CONFIRM_BUTTON_s1_readdata            (mm_interconnect_0_confirm_button_s1_readdata),         //                                .readdata
+		.CONFIRM_BUTTON_s1_writedata           (mm_interconnect_0_confirm_button_s1_writedata),        //                                .writedata
+		.CONFIRM_BUTTON_s1_chipselect          (mm_interconnect_0_confirm_button_s1_chipselect),       //                                .chipselect
 		.CPU_debug_mem_slave_address           (mm_interconnect_0_cpu_debug_mem_slave_address),        //             CPU_debug_mem_slave.address
 		.CPU_debug_mem_slave_write             (mm_interconnect_0_cpu_debug_mem_slave_write),          //                                .write
 		.CPU_debug_mem_slave_read              (mm_interconnect_0_cpu_debug_mem_slave_read),           //                                .read
@@ -358,11 +363,6 @@ module system (
 		.INC_MIN_BUTTON_s1_readdata            (mm_interconnect_0_inc_min_button_s1_readdata),         //                                .readdata
 		.INC_MIN_BUTTON_s1_writedata           (mm_interconnect_0_inc_min_button_s1_writedata),        //                                .writedata
 		.INC_MIN_BUTTON_s1_chipselect          (mm_interconnect_0_inc_min_button_s1_chipselect),       //                                .chipselect
-		.INC_SEC_BUTTON_s1_address             (mm_interconnect_0_inc_sec_button_s1_address),          //               INC_SEC_BUTTON_s1.address
-		.INC_SEC_BUTTON_s1_write               (mm_interconnect_0_inc_sec_button_s1_write),            //                                .write
-		.INC_SEC_BUTTON_s1_readdata            (mm_interconnect_0_inc_sec_button_s1_readdata),         //                                .readdata
-		.INC_SEC_BUTTON_s1_writedata           (mm_interconnect_0_inc_sec_button_s1_writedata),        //                                .writedata
-		.INC_SEC_BUTTON_s1_chipselect          (mm_interconnect_0_inc_sec_button_s1_chipselect),       //                                .chipselect
 		.JTAG_avalon_jtag_slave_address        (mm_interconnect_0_jtag_avalon_jtag_slave_address),     //          JTAG_avalon_jtag_slave.address
 		.JTAG_avalon_jtag_slave_write          (mm_interconnect_0_jtag_avalon_jtag_slave_write),       //                                .write
 		.JTAG_avalon_jtag_slave_read           (mm_interconnect_0_jtag_avalon_jtag_slave_read),        //                                .read

@@ -9,10 +9,11 @@
 volatile unsigned char *LED_DATA = (unsigned char *) LEDS_BASE;
 
 // Alarm, specifies the alarm time in seconds
-volatile unsigned int alarm_time = 0;
+volatile unsigned int alarm_time = 81000;
 
 // Determines if leds should be on or off
 volatile int pulse_value = 0;
+
 
 /**
  * Verifies if the current time is between the alarm time and

@@ -202,10 +202,6 @@
    type="VERILOG"
    library="JTAG" />
  <file
-   path="system/testbench/system_tb/simulation/submodules/system_INC_HOUR_BUTTON.v"
-   type="VERILOG"
-   library="INC_HOUR_BUTTON" />
- <file
    path="system/testbench/system_tb/simulation/submodules/system_HOUR_1.v"
    type="VERILOG"
    library="HOUR_1" />
@@ -214,17 +210,21 @@
    type="VERILOG"
    library="CPU" />
  <file
+   path="system/testbench/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v"
+   type="VERILOG"
+   library="CONFIRM_BUTTON" />
+ <file
    path="system/testbench/system_tb/simulation/submodules/altera_avalon_reset_source.sv"
    type="SYSTEM_VERILOG"
    library="system_inst_reset_bfm" />
  <file
    path="system/testbench/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"
    type="SYSTEM_VERILOG"
-   library="system_inst_inc_hour_button_bfm" />
+   library="system_inst_hour_1_bfm" />
  <file
    path="system/testbench/system_tb/simulation/submodules/altera_conduit_bfm.sv"
    type="SYSTEM_VERILOG"
-   library="system_inst_hour_1_bfm" />
+   library="system_inst_confirm_button_bfm" />
  <file
    path="system/testbench/system_tb/simulation/submodules/altera_avalon_clock_source.sv"
    type="SYSTEM_VERILOG"

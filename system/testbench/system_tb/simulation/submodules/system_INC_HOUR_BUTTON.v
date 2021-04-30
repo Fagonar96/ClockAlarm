@@ -39,28 +39,28 @@ module system_INC_HOUR_BUTTON (
   input   [  1: 0] address;
   input            chipselect;
   input            clk;
-  input   [  7: 0] in_port;
+  input   [  4: 0] in_port;
   input            reset_n;
   input            write_n;
   input   [ 31: 0] writedata;
 
 
 wire             clk_en;
-reg     [  7: 0] d1_data_in;
-reg     [  7: 0] d2_data_in;
-wire    [  7: 0] data_in;
-reg     [  7: 0] edge_capture;
+reg     [  4: 0] d1_data_in;
+reg     [  4: 0] d2_data_in;
+wire    [  4: 0] data_in;
+reg     [  4: 0] edge_capture;
 wire             edge_capture_wr_strobe;
-wire    [  7: 0] edge_detect;
+wire    [  4: 0] edge_detect;
 wire             irq;
-reg     [  7: 0] irq_mask;
-wire    [  7: 0] read_mux_out;
+reg     [  4: 0] irq_mask;
+wire    [  4: 0] read_mux_out;
 reg     [ 31: 0] readdata;
   assign clk_en = 1;
   //s1, which is an e_avalon_slave
-  assign read_mux_out = ({8 {(address == 0)}} & data_in) |
-    ({8 {(address == 2)}} & irq_mask) |
-    ({8 {(address == 3)}} & edge_capture);
+  assign read_mux_out = ({5 {(address == 0)}} & data_in) |
+    ({5 {(address == 2)}} & irq_mask) |
+    ({5 {(address == 3)}} & edge_capture);
 
   always @(posedge clk or negedge reset_n)
     begin
@@ -77,7 +77,7 @@ reg     [ 31: 0] readdata;
       if (reset_n == 0)
           irq_mask <= 0;
       else if (chipselect && ~write_n && (address == 2))
-          irq_mask <= writedata[7 : 0];
+          irq_mask <= writedata[4 : 0];
     end
 
 
@@ -140,42 +140,6 @@ reg     [ 31: 0] readdata;
               edge_capture[4] <= 0;
           else if (edge_detect[4])
               edge_capture[4] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[5] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe)
-              edge_capture[5] <= 0;
-          else if (edge_detect[5])
-              edge_capture[5] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[6] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe)
-              edge_capture[6] <= 0;
-          else if (edge_detect[6])
-              edge_capture[6] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[7] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe)
-              edge_capture[7] <= 0;
-          else if (edge_detect[7])
-              edge_capture[7] <= -1;
     end
 
 
