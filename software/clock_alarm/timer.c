@@ -2,6 +2,7 @@
 #include "sys/alt_irq.h"
 #include "system.h"
 #include "alarm.c"
+#include "update_displays.c"
 
 
 #define SECONDS_IN_DAY 86400
@@ -32,6 +33,7 @@ void timer_interrupt(void* isr_context) {
 	}
 
 	check_alarm(time_counter);
+	update_displays(time_counter);
 	// alt_printf("Timer: %x\n", time_counter);
 }
 
