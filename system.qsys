@@ -549,7 +549,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="7" />
  </module>
  <module name="HOUR_2" kind="altera_avalon_pio" version="19.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -563,7 +563,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="7" />
  </module>
  <module
    name="INC_HOUR_BUTTON"
@@ -628,7 +628,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="10" />
  </module>
  <module name="MIN_1" kind="altera_avalon_pio" version="19.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -642,7 +642,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="7" />
  </module>
  <module name="MIN_2" kind="altera_avalon_pio" version="19.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -656,7 +656,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="7" />
  </module>
  <module
    name="RAM"
@@ -702,7 +702,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="7" />
  </module>
  <module name="SEC_2" kind="altera_avalon_pio" version="19.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -716,7 +716,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="7" />
  </module>
  <module
    name="SET_MODE_BUTTON"

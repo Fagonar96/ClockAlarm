@@ -1,0 +1,257 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hour_1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_1_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_2_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "min_1_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "min_2_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_1_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_2_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "set_mode_button_export",
+					"strict" : false
+				},
+				{
+					"name" : "inc_hour_button_export",
+					"strict" : false
+				},
+				{
+					"name" : "inc_min_button_export",
+					"strict" : false
+				},
+				{
+					"name" : "confirm_button_export",
+					"strict" : false
+				},
+				{
+					"name" : "reset_reset_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2021.04.28.20:53:30</td>
+    <td class="l">2021.04.29.23:36:03</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -91,13 +91,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </a> Nios II 19.1
      <br/>All Components
      <br/>&#160;&#160;
-     <a href="#module_BUTTONS"><b>BUTTONS</b>
+     <a href="#module_CONFIRM_BUTTON"><b>CONFIRM_BUTTON</b>
      </a> altera_avalon_pio 19.1
      <br/>&#160;&#160;
      <a href="#module_CPU"><b>CPU</b>
      </a> altera_nios2_gen2 19.1
      <br/>&#160;&#160;
-     <a href="#module_DISPLAY"><b>DISPLAY</b>
+     <a href="#module_HOUR_1"><b>HOUR_1</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_HOUR_2"><b>HOUR_2</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_INC_HOUR_BUTTON"><b>INC_HOUR_BUTTON</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_INC_MIN_BUTTON"><b>INC_MIN_BUTTON</b>
      </a> altera_avalon_pio 19.1
      <br/>&#160;&#160;
      <a href="#module_JTAG"><b>JTAG</b>
@@ -106,8 +115,26 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_LEDs"><b>LEDs</b>
      </a> altera_avalon_pio 19.1
      <br/>&#160;&#160;
+     <a href="#module_MIN_1"><b>MIN_1</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_MIN_2"><b>MIN_2</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
      <a href="#module_RAM"><b>RAM</b>
-     </a> altera_avalon_onchip_memory2 19.1</span>
+     </a> altera_avalon_onchip_memory2 19.1
+     <br/>&#160;&#160;
+     <a href="#module_SEC_1"><b>SEC_1</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_SEC_2"><b>SEC_2</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_SET_MODE_BUTTON"><b>SET_MODE_BUTTON</b>
+     </a> altera_avalon_pio 19.1
+     <br/>&#160;&#160;
+     <a href="#module_TIMER"><b>TIMER</b>
+     </a> altera_avalon_timer 19.1</span>
    </div>
   </div>
   <div style="width:100% ;  height:10px"> </div>
@@ -126,7 +153,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavemodule">&#160;
-     <a href="#module_BUTTONS"><b>BUTTONS</b>
+     <a href="#module_CONFIRM_BUTTON"><b>CONFIRM_BUTTON</b>
      </a>
     </td>
     <td class="empty"></td>
@@ -134,7 +161,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00001010</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001040</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -152,7 +179,33 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavemodule">&#160;
-     <a href="#module_DISPLAY"><b>DISPLAY</b>
+     <a href="#module_HOUR_1"><b>HOUR_1</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001050</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_HOUR_2"><b>HOUR_2</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001060</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_INC_HOUR_BUTTON"><b>INC_HOUR_BUTTON</b>
      </a>
     </td>
     <td class="empty"></td>
@@ -161,6 +214,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <tr>
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00001020</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_INC_MIN_BUTTON"><b>INC_MIN_BUTTON</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001030</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -191,6 +257,32 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavemodule">&#160;
+     <a href="#module_MIN_1"><b>MIN_1</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001070</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_MIN_2"><b>MIN_2</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001080</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
      <a href="#module_RAM"><b>RAM</b>
      </a>
     </td>
@@ -202,205 +294,59 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
    </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_SEC_1"><b>SEC_1</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001090</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_SEC_2"><b>SEC_2</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001100</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_SET_MODE_BUTTON"><b>SET_MODE_BUTTON</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00001010</td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_TIMER"><b>TIMER</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00002000</td>
+    <td class="addr"><span style="color:#989898">0x</span>00002000</td>
+   </tr>
   </table>
-  <a name="module_BUTTONS"> </a>
-  <div>
-   <hr/>
-   <h2>BUTTONS</h2>altera_avalon_pio v19.1
-   <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_CPU">CPU</a>
-      </td>
-      <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="7">BUTTONS</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_CLK">CLK</a>
-      </td>
-      <td class="from">clk&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-    </table>
-   </div>
-   <br/>
-   <br/>
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Parameters</h2>
-      <table>
-       <tr>
-        <td class="parametername">bitClearingEdgeCapReg</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">bitModifyingOutReg</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">captureEdge</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">direction</td>
-        <td class="parametervalue">Input</td>
-       </tr>
-       <tr>
-        <td class="parametername">edgeType</td>
-        <td class="parametervalue">RISING</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateIRQ</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">irqType</td>
-        <td class="parametervalue">LEVEL</td>
-       </tr>
-       <tr>
-        <td class="parametername">resetValue</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">simDoTestBenchWiring</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">simDrivenValue</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">width</td>
-        <td class="parametervalue">8</td>
-       </tr>
-       <tr>
-        <td class="parametername">clockRate</td>
-        <td class="parametervalue">50000000</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_has_tri</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_has_out</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_has_in</td>
-        <td class="parametervalue">true</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_do_test_bench_wiring</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_capture</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_edge_type</td>
-        <td class="parametervalue">NONE</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_irq_type</td>
-        <td class="parametervalue">NONE</td>
-       </tr>
-       <tr>
-        <td class="parametername">derived_has_irq</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamily</td>
-        <td class="parametervalue">UNKNOWN</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateLegacySim</td>
-        <td class="parametervalue">false</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>&#160;&#160;
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Software Assignments</h2>
-      <table>
-       <tr>
-        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CAPTURE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
-       </tr>
-       <tr>
-        <td class="parametername">DO_TEST_BENCH_WIRING</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">DRIVEN_SIM_VALUE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">EDGE_TYPE</td>
-        <td class="parametervalue">NONE</td>
-       </tr>
-       <tr>
-        <td class="parametername">FREQ</td>
-        <td class="parametervalue">50000000</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_IN</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_OUT</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_TRI</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">IRQ_TYPE</td>
-        <td class="parametervalue">NONE</td>
-       </tr>
-       <tr>
-        <td class="parametername">RESET_VALUE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>
-  </div>
   <a name="module_CLK"> </a>
   <div>
    <hr/>
@@ -448,6 +394,210 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_CONFIRM_BUTTON"> </a>
+  <div>
+   <hr/>
+   <h2>CONFIRM_BUTTON</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="9">CONFIRM_BUTTON</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Input</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
   <a name="module_CPU"> </a>
   <div>
    <hr/>
@@ -460,7 +610,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_CLK">CLK</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="24">CPU</td>
+      <td class="main" rowspan="63">CPU</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -553,8 +703,112 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_SET_MODE_BUTTON">SET_MODE_BUTTON</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_INC_HOUR_BUTTON">INC_HOUR_BUTTON</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_INC_MIN_BUTTON">INC_MIN_BUTTON</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CONFIRM_BUTTON">CONFIRM_BUTTON</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_BUTTONS">BUTTONS</a>
+       <a href="#module_HOUR_1">HOUR_1</a>
       </td>
      </tr>
      <tr>
@@ -570,13 +824,113 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_DISPLAY">DISPLAY</a>
+       <a href="#module_HOUR_2">HOUR_2</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_MIN_1">MIN_1</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_MIN_2">MIN_2</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_SEC_1">SEC_1</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_SEC_2">SEC_2</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="6">
+       <a href="#module_TIMER">TIMER</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
      </tr>
     </table>
    </div>
@@ -1269,7 +1623,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='RAM.s1' start='0x0' end='0x1000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='CPU.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='JTAG.avalon_jtag_slave' start='0x3018' end='0x3020' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='RAM.s1' start='0x0' end='0x1000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='TIMER.s1' start='0x2000' end='0x2020' type='altera_avalon_timer.s1' /&gt;&lt;slave name='CPU.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='JTAG.avalon_jtag_slave' start='0x3018' end='0x3020' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">faSlaveMapParam</td>
@@ -1277,7 +1631,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='RAM.s1' start='0x0' end='0x1000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='LEDs.s1' start='0x1000' end='0x1010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='BUTTONS.s1' start='0x1010' end='0x1020' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DISPLAY.s1' start='0x1020' end='0x1030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='CPU.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='JTAG.avalon_jtag_slave' start='0x3018' end='0x3020' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='RAM.s1' start='0x0' end='0x1000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='LEDs.s1' start='0x1000' end='0x1010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='SET_MODE_BUTTON.s1' start='0x1010' end='0x1020' type='altera_avalon_pio.s1' /&gt;&lt;slave name='INC_HOUR_BUTTON.s1' start='0x1020' end='0x1030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='INC_MIN_BUTTON.s1' start='0x1030' end='0x1040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='CONFIRM_BUTTON.s1' start='0x1040' end='0x1050' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HOUR_1.s1' start='0x1050' end='0x1060' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HOUR_2.s1' start='0x1060' end='0x1070' type='altera_avalon_pio.s1' /&gt;&lt;slave name='MIN_1.s1' start='0x1070' end='0x1080' type='altera_avalon_pio.s1' /&gt;&lt;slave name='MIN_2.s1' start='0x1080' end='0x1090' type='altera_avalon_pio.s1' /&gt;&lt;slave name='SEC_1.s1' start='0x1090' end='0x10A0' type='altera_avalon_pio.s1' /&gt;&lt;slave name='SEC_2.s1' start='0x1100' end='0x1110' type='altera_avalon_pio.s1' /&gt;&lt;slave name='TIMER.s1' start='0x2000' end='0x2020' type='altera_avalon_timer.s1' /&gt;&lt;slave name='CPU.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='JTAG.avalon_jtag_slave' start='0x3018' end='0x3020' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -1329,7 +1683,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">internalIrqMaskSystemInfo</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">63</td>
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
@@ -1501,10 +1855,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_DISPLAY"> </a>
+  <a name="module_HOUR_1"> </a>
   <div>
    <hr/>
-   <h2>DISPLAY</h2>altera_avalon_pio v19.1
+   <h2>HOUR_1</h2>altera_avalon_pio v19.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -1513,7 +1867,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_CPU">CPU</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="7">DISPLAY</td>
+      <td class="main" rowspan="7">HOUR_1</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -1587,7 +1941,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">width</td>
-        <td class="parametervalue">8</td>
+        <td class="parametervalue">7</td>
        </tr>
        <tr>
         <td class="parametername">clockRate</td>
@@ -1656,7 +2010,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
+        <td class="parametervalue">7</td>
        </tr>
        <tr>
         <td class="parametername">DO_TEST_BENCH_WIRING</td>
@@ -1689,6 +2043,612 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <tr>
         <td class="parametername">IRQ_TYPE</td>
         <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_HOUR_2"> </a>
+  <div>
+   <hr/>
+   <h2>HOUR_2</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="7">HOUR_2</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Output</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">RISING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">LEVEL</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_INC_HOUR_BUTTON"> </a>
+  <div>
+   <hr/>
+   <h2>INC_HOUR_BUTTON</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="9">INC_HOUR_BUTTON</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Input</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_INC_MIN_BUTTON"> </a>
+  <div>
+   <hr/>
+   <h2>INC_MIN_BUTTON</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="9">INC_MIN_BUTTON</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Input</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">EDGE</td>
        </tr>
        <tr>
         <td class="parametername">RESET_VALUE</td>
@@ -1943,7 +2903,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">width</td>
-        <td class="parametervalue">8</td>
+        <td class="parametervalue">10</td>
        </tr>
        <tr>
         <td class="parametername">clockRate</td>
@@ -2012,7 +2972,403 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
+        <td class="parametervalue">10</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_MIN_1"> </a>
+  <div>
+   <hr/>
+   <h2>MIN_1</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="7">MIN_1</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Output</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">RISING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">LEVEL</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_MIN_2"> </a>
+  <div>
+   <hr/>
+   <h2>MIN_2</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="7">MIN_2</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Output</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">RISING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">LEVEL</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">7</td>
        </tr>
        <tr>
         <td class="parametername">DO_TEST_BENCH_WIRING</td>
@@ -2323,10 +3679,804 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_SEC_1"> </a>
+  <div>
+   <hr/>
+   <h2>SEC_1</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="7">SEC_1</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Output</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">RISING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">LEVEL</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_SEC_2"> </a>
+  <div>
+   <hr/>
+   <h2>SEC_2</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="7">SEC_2</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Output</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">RISING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">LEVEL</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">7</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">NONE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_SET_MODE_BUTTON"> </a>
+  <div>
+   <hr/>
+   <h2>SET_MODE_BUTTON</h2>altera_avalon_pio v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="9">SET_MODE_BUTTON</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">bitClearingEdgeCapReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">bitModifyingOutReg</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">captureEdge</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">direction</td>
+        <td class="parametervalue">Input</td>
+       </tr>
+       <tr>
+        <td class="parametername">edgeType</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateIRQ</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">irqType</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDoTestBenchWiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">simDrivenValue</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">width</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_tri</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_out</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_in</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_do_test_bench_wiring</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_capture</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_edge_type</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_irq_type</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">derived_has_irq</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">BIT_CLEARING_EDGE_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">BIT_MODIFYING_OUTPUT_REGISTER</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">CAPTURE</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DATA_WIDTH</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">DO_TEST_BENCH_WIRING</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">DRIVEN_SIM_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EDGE_TYPE</td>
+        <td class="parametervalue">FALLING</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_IN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_OUT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">HAS_TRI</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">IRQ_TYPE</td>
+        <td class="parametervalue">EDGE</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_VALUE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_TIMER"> </a>
+  <div>
+   <hr/>
+   <h2>TIMER</h2>altera_avalon_timer v19.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="6">
+       <a href="#module_CPU">CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="11">TIMER</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_CLK">CLK</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">alwaysRun</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">counterSize</td>
+        <td class="parametervalue">32</td>
+       </tr>
+       <tr>
+        <td class="parametername">fixedPeriod</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">period</td>
+        <td class="parametervalue">0.01</td>
+       </tr>
+       <tr>
+        <td class="parametername">periodUnits</td>
+        <td class="parametervalue">MSEC</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetOutput</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">snapshot</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">timeoutPulseOutput</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">systemFrequency</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">watchdogPulse</td>
+        <td class="parametervalue">2</td>
+       </tr>
+       <tr>
+        <td class="parametername">timerPreset</td>
+        <td class="parametervalue">CUSTOM</td>
+       </tr>
+       <tr>
+        <td class="parametername">periodUnitsString</td>
+        <td class="parametervalue">ms</td>
+       </tr>
+       <tr>
+        <td class="parametername">valueInSecond</td>
+        <td class="parametervalue">0.001</td>
+       </tr>
+       <tr>
+        <td class="parametername">loadValue</td>
+        <td class="parametervalue">499</td>
+       </tr>
+       <tr>
+        <td class="parametername">mult</td>
+        <td class="parametervalue">0.001</td>
+       </tr>
+       <tr>
+        <td class="parametername">ticksPerSec</td>
+        <td class="parametervalue">99999.0</td>
+       </tr>
+       <tr>
+        <td class="parametername">slave_address_width</td>
+        <td class="parametervalue">3</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">ALWAYS_RUN</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">COUNTER_SIZE</td>
+        <td class="parametervalue">32</td>
+       </tr>
+       <tr>
+        <td class="parametername">FIXED_PERIOD</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">FREQ</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">LOAD_VALUE</td>
+        <td class="parametervalue">499</td>
+       </tr>
+       <tr>
+        <td class="parametername">MULT</td>
+        <td class="parametervalue">0.001</td>
+       </tr>
+       <tr>
+        <td class="parametername">PERIOD</td>
+        <td class="parametervalue">0.01</td>
+       </tr>
+       <tr>
+        <td class="parametername">PERIOD_UNITS</td>
+        <td class="parametervalue">ms</td>
+       </tr>
+       <tr>
+        <td class="parametername">RESET_OUTPUT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">SNAPSHOT</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">TICKS_PER_SEC</td>
+        <td class="parametervalue">99999</td>
+       </tr>
+       <tr>
+        <td class="parametername">TIMEOUT_PULSE_OUTPUT</td>
+        <td class="parametervalue">0</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
   <table class="blueBar">
    <tr>
     <td class="l">generation took 0.00 seconds</td>
-    <td class="r">rendering took 0.58 seconds</td>
+    <td class="r">rendering took 0.03 seconds</td>
    </tr>
   </table>
  </body>

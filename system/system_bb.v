@@ -15,16 +15,16 @@ module system (
 	set_mode_button_export);	
 
 	input		clk_clk;
-	output	[7:0]	hour_1_export;
-	output	[7:0]	hour_2_export;
+	output	[6:0]	hour_1_export;
+	output	[6:0]	hour_2_export;
 	input		inc_hour_button_export;
 	input		inc_min_button_export;
 	input		confirm_button_export;
-	output	[7:0]	leds_export;
-	output	[7:0]	min_1_export;
-	output	[7:0]	min_2_export;
+	output	[9:0]	leds_export;
+	output	[6:0]	min_1_export;
+	output	[6:0]	min_2_export;
 	input		reset_reset_n;
-	output	[7:0]	sec_1_export;
-	output	[7:0]	sec_2_export;
+	output	[6:0]	sec_1_export;
+	output	[6:0]	sec_2_export;
 	input		set_mode_button_export;
 endmodule
