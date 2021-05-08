@@ -129,7 +129,7 @@ APP_LIBRARY_DIRS :=
 APP_LIBRARY_NAMES :=
 
 # Pre- and post- processor settings.
-BUILD_PRE_PROCESS :=
+BUILD_PRE_PROCESS := touch $(ELF).srec && touch hello_world.elf.srec
 BUILD_POST_PROCESS :=
 
 QUARTUS_PROJECT_DIR := ../../

@@ -32,10 +32,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "hour_1_export[7]",
-					"strict" : false
-				},
-				{
 					"name" : "hour_2_export[0]",
 					"strict" : false
 				},
@@ -61,10 +57,6 @@
 				},
 				{
 					"name" : "hour_2_export[6]",
-					"strict" : false
-				},
-				{
-					"name" : "hour_2_export[7]",
 					"strict" : false
 				},
 				{
@@ -100,6 +92,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "leds_export[8]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[9]",
+					"strict" : false
+				},
+				{
 					"name" : "min_1_export[0]",
 					"strict" : false
 				},
@@ -125,10 +125,6 @@
 				},
 				{
 					"name" : "min_1_export[6]",
-					"strict" : false
-				},
-				{
-					"name" : "min_1_export[7]",
 					"strict" : false
 				},
 				{
@@ -160,10 +156,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "min_2_export[7]",
-					"strict" : false
-				},
-				{
 					"name" : "sec_1_export[0]",
 					"strict" : false
 				},
@@ -192,10 +184,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "sec_1_export[7]",
-					"strict" : false
-				},
-				{
 					"name" : "sec_2_export[0]",
 					"strict" : false
 				},
@@ -221,10 +209,6 @@
 				},
 				{
 					"name" : "sec_2_export[6]",
-					"strict" : false
-				},
-				{
-					"name" : "sec_2_export[7]",
 					"strict" : false
 				},
 				{

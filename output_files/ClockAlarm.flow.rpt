@@ -1,6 +1,6 @@
 Flow report for ClockAlarm
-Thu Apr 29 23:26:53 2021
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri May 07 17:41:12 2021
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.09std SJ Lite Edition
 
 
 ---------------------
@@ -38,29 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 29 23:26:53 2021       ;
-; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name                   ; ClockAlarm                                  ;
-; Top-level Entity Name           ; system                                      ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1142                                        ;
-; Total pins                      ; 62                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 44,032                                      ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                  ;
++---------------------------------+-------------------------------------------------------------+
+; Flow Status                     ; Successful - Fri May 07 17:41:05 2021                       ;
+; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 Patches 0.09std SJ Lite Edition ;
+; Revision Name                   ; ClockAlarm                                                  ;
+; Top-level Entity Name           ; system                                                      ;
+; Family                          ; Cyclone V                                                   ;
+; Device                          ; 5CSEMA5F31C6                                                ;
+; Timing Models                   ; Final                                                       ;
+; Logic utilization (in ALMs)     ; 905 / 32,070 ( 3 % )                                        ;
+; Total registers                 ; 1256                                                        ;
+; Total pins                      ; 58 / 457 ( 13 % )                                           ;
+; Total virtual pins              ; 0                                                           ;
+; Total block memory bits         ; 44,032 / 4,065,280 ( 1 % )                                  ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                              ;
+; Total HSSI RX PCSs              ; 0                                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                                           ;
+; Total HSSI TX PCSs              ; 0                                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                               ;
++---------------------------------+-------------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/29/2021 23:26:33 ;
+; Start date & time ; 05/07/2021 17:38:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ClockAlarm          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 233497590470431.161976039304848        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 233497590470431.162043073621328        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; system      ; Top        ;
@@ -97,8 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 5016 MB             ; 00:00:41                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 5028 MB             ; 00:01:26                           ;
+; Fitter               ; 00:01:17     ; 1.1                     ; 7075 MB             ; 00:04:52                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4855 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.8                     ; 5256 MB             ; 00:00:10                           ;
+; Total                ; 00:02:12     ; --                      ; --                  ; 00:06:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,6 +111,9 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-K1HO382  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-K1HO382  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K1HO382  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-K1HO382  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -115,6 +121,9 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off ClockAlarm -c ClockAlarm
+quartus_fit --read_settings_files=off --write_settings_files=off ClockAlarm -c ClockAlarm
+quartus_asm --read_settings_files=off --write_settings_files=off ClockAlarm -c ClockAlarm
+quartus_sta ClockAlarm -c ClockAlarm
 
 
 

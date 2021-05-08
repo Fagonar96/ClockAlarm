@@ -198,6 +198,10 @@
    type="VERILOG"
    library="RAM" />
  <file
+   path="system/testbench/system_tb/simulation/submodules/system_LEDs.v"
+   type="VERILOG"
+   library="LEDs" />
+ <file
    path="system/testbench/system_tb/simulation/submodules/system_JTAG.v"
    type="VERILOG"
    library="JTAG" />
@@ -217,6 +221,10 @@
    path="system/testbench/system_tb/simulation/submodules/altera_avalon_reset_source.sv"
    type="SYSTEM_VERILOG"
    library="system_inst_reset_bfm" />
+ <file
+   path="system/testbench/system_tb/simulation/submodules/altera_conduit_bfm_0003.sv"
+   type="SYSTEM_VERILOG"
+   library="system_inst_leds_bfm" />
  <file
    path="system/testbench/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"
    type="SYSTEM_VERILOG"

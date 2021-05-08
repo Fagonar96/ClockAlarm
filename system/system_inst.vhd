@@ -1,11 +1,11 @@
 	component system is
 		port (
 			clk_clk                : in  std_logic                    := 'X'; -- clk
+			confirm_button_export  : in  std_logic                    := 'X'; -- export
 			hour_1_export          : out std_logic_vector(6 downto 0);        -- export
 			hour_2_export          : out std_logic_vector(6 downto 0);        -- export
 			inc_hour_button_export : in  std_logic                    := 'X'; -- export
 			inc_min_button_export  : in  std_logic                    := 'X'; -- export
-			confirm_button_export  : in  std_logic                    := 'X'; -- export
 			leds_export            : out std_logic_vector(9 downto 0);        -- export
 			min_1_export           : out std_logic_vector(6 downto 0);        -- export
 			min_2_export           : out std_logic_vector(6 downto 0);        -- export
@@ -19,11 +19,11 @@
 	u0 : component system
 		port map (
 			clk_clk                => CONNECTED_TO_clk_clk,                --             clk.clk
+			confirm_button_export  => CONNECTED_TO_confirm_button_export,  --  confirm_button.export
 			hour_1_export          => CONNECTED_TO_hour_1_export,          --          hour_1.export
 			hour_2_export          => CONNECTED_TO_hour_2_export,          --          hour_2.export
 			inc_hour_button_export => CONNECTED_TO_inc_hour_button_export, -- inc_hour_button.export
 			inc_min_button_export  => CONNECTED_TO_inc_min_button_export,  --  inc_min_button.export
-			confirm_button_export  => CONNECTED_TO_confirm_button_export,  --  confirm_button.export
 			leds_export            => CONNECTED_TO_leds_export,            --            leds.export
 			min_1_export           => CONNECTED_TO_min_1_export,           --           min_1.export
 			min_2_export           => CONNECTED_TO_min_2_export,           --           min_2.export

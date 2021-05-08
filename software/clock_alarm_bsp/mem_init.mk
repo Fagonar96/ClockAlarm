@@ -37,9 +37,11 @@ ifeq ($(findstring Microsoft,$(UNAME)),Microsoft)
 	WINDOWS_EXE = .exe
 endif
 
+eq = $(and $(findstring $(1),$(2)),$(findstring $(2),$(1)))
+
 ifdef WINDOWS_EXE 
 	adjust-path = $(if $1,$(shell wslpath "$1"),)
-	adjust-path-mixed = $(if $1,$(shell wslpath -m "$1"),)
+	adjust-path-mixed = $(if $(call eq,$(shell echo $1 | head -c 5),/mnt/),$(shell echo $1 | sed 's/\/mnt\///g;s/\//:\//1'),$1)
 else # !WINDOWS_EXE
 	adjust-path = $1
 	adjust-path-mixed = $1
@@ -65,7 +67,7 @@ ELF2FLASH := elf2flash$(WINDOWS_EXE)
 endif
 
 ifeq ($(FLASH2DAT),)
-FLASH2DAT := flash2dat$(WINDOWS_EXE)
+FLASH2DAT := flash2dat
 endif
 
 ifeq ($(ALT_FILE_CONVERT),)
@@ -111,9 +113,16 @@ MEM_INIT_QIP_FILE ?= $(MEM_INIT_DIR)/meminit.qip
 #-------------------------------------
 
 BOOT_LOADER_PATH ?= $(SOPC_KIT_NIOS2)/components/altera_nios2
-BOOT_LOADER_CFI ?= $(BOOT_LOADER_PATH)/boot_loader_cfi.srec
-BOOT_LOADER_CFI_BE ?= $(BOOT_LOADER_PATH)/boot_loader_cfi_be.srec
+BOOT_LOADER_CFI_LOC ?= $(BOOT_LOADER_PATH)/boot_loader_cfi.srec
+BOOT_LOADER_CFI_BE_LOC ?= $(BOOT_LOADER_PATH)/boot_loader_cfi_be.srec
 
+ifdef WINDOWS_EXE
+	BOOT_LOADER_CFI=$(shell wslpath -w $(BOOT_LOADER_CFI_LOC))
+	BOOT_LOADER_CFI_BE=$(shell wslpath -w $(BOOT_LOADER_CFI_BE_LOC))
+else # !WINDOWS_EXE
+	BOOT_LOADER_CFI=$(BOOT_LOADER_CFI_LOC)
+	BOOT_LOADER_CFI_BE=$(BOOT_LOADER_CFI_BE_LOC)
+endif
 
 #-------------------------------------
 # Default Target

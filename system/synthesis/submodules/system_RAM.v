@@ -36,7 +36,7 @@ module system_RAM (
                   )
 ;
 
-  parameter INIT_FILE = "system_RAM.hex";
+  parameter INIT_FILE = "E:/ClockAlarm/software/clock_alarm/mem_init/system_RAM.hex";
 
 
   output  [ 31: 0] readdata;

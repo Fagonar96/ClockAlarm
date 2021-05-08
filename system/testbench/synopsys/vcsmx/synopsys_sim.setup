@@ -28,11 +28,13 @@ irq_mapper:                            ./libraries/irq_mapper/
 mm_interconnect_0:                     ./libraries/mm_interconnect_0/                    
 TIMER:                                 ./libraries/TIMER/                                
 RAM:                                   ./libraries/RAM/                                  
+LEDs:                                  ./libraries/LEDs/                                 
 JTAG:                                  ./libraries/JTAG/                                 
 HOUR_1:                                ./libraries/HOUR_1/                               
 CPU:                                   ./libraries/CPU/                                  
 CONFIRM_BUTTON:                        ./libraries/CONFIRM_BUTTON/                       
 system_inst_reset_bfm:                 ./libraries/system_inst_reset_bfm/                
+system_inst_leds_bfm:                  ./libraries/system_inst_leds_bfm/                 
 system_inst_hour_1_bfm:                ./libraries/system_inst_hour_1_bfm/               
 system_inst_confirm_button_bfm:        ./libraries/system_inst_confirm_button_bfm/       
 system_inst_clk_bfm:                   ./libraries/system_inst_clk_bfm/                  

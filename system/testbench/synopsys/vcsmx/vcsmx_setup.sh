@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 19.1 670 win32 2021.04.29.22:28:43
+# ACDS 19.1 670 win32 2021.05.07.17:37:37
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 19.1 670 win32 2021.04.29.22:28:43
+# ACDS 19.1 670 win32 2021.05.07.17:37:37
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system_tb"
@@ -173,11 +173,13 @@ mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/TIMER/
 mkdir -p ./libraries/RAM/
+mkdir -p ./libraries/LEDs/
 mkdir -p ./libraries/JTAG/
 mkdir -p ./libraries/HOUR_1/
 mkdir -p ./libraries/CPU/
 mkdir -p ./libraries/CONFIRM_BUTTON/
 mkdir -p ./libraries/system_inst_reset_bfm/
+mkdir -p ./libraries/system_inst_leds_bfm/
 mkdir -p ./libraries/system_inst_hour_1_bfm/
 mkdir -p ./libraries/system_inst_confirm_button_bfm/
 mkdir -p ./libraries/system_inst_clk_bfm/
@@ -262,11 +264,13 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_mm_interconnect_0.v"                                    -work mm_interconnect_0                    
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_TIMER.v"                                                -work TIMER                                
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.v"                                                  -work RAM                                  
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_LEDs.v"                                                 -work LEDs                                 
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_JTAG.v"                                                 -work JTAG                                 
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_HOUR_1.v"                                               -work HOUR_1                               
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU.v"                                                  -work CPU                                  
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v"                                       -work CONFIRM_BUTTON                       
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_reset_source.sv"                                 -work system_inst_reset_bfm                
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                    -work system_inst_leds_bfm                 
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                    -work system_inst_hour_1_bfm               
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm.sv"                                         -work system_inst_confirm_button_bfm       
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_clock_source.sv"                                 -work system_inst_clk_bfm                  

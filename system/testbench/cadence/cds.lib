@@ -35,11 +35,13 @@ DEFINE irq_mapper                            ./libraries/irq_mapper/
 DEFINE mm_interconnect_0                     ./libraries/mm_interconnect_0/                    
 DEFINE TIMER                                 ./libraries/TIMER/                                
 DEFINE RAM                                   ./libraries/RAM/                                  
+DEFINE LEDs                                  ./libraries/LEDs/                                 
 DEFINE JTAG                                  ./libraries/JTAG/                                 
 DEFINE HOUR_1                                ./libraries/HOUR_1/                               
 DEFINE CPU                                   ./libraries/CPU/                                  
 DEFINE CONFIRM_BUTTON                        ./libraries/CONFIRM_BUTTON/                       
 DEFINE system_inst_reset_bfm                 ./libraries/system_inst_reset_bfm/                
+DEFINE system_inst_leds_bfm                  ./libraries/system_inst_leds_bfm/                 
 DEFINE system_inst_hour_1_bfm                ./libraries/system_inst_hour_1_bfm/               
 DEFINE system_inst_confirm_button_bfm        ./libraries/system_inst_confirm_button_bfm/       
 DEFINE system_inst_clk_bfm                   ./libraries/system_inst_clk_bfm/                  

@@ -1,12 +1,12 @@
-# system info system_tb on 2021.04.29.22:28:43
+# system info system_tb on 2021.05.07.17:37:36
 system_info:
 name,value
-DEVICE,5CEBA2F17A7
+DEVICE,5CSEMA5F31C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1619756910
+GENERATION_ID,1620430639
 #
 #
-# Files generated for system_tb on 2021.04.29.22:28:43
+# Files generated for system_tb on 2021.05.07.17:37:36
 files:
 filepath,kind,attributes,module,is_top
 system/testbench/system_tb/simulation/system_tb.v,VERILOG,,system_tb,true
@@ -17,12 +17,15 @@ system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG
 system/testbench/system_tb/simulation/submodules/altera_conduit_bfm.sv,SYSTEM_VERILOG,,altera_conduit_bfm,false
 system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_conduit_bfm_0002,false
 system/testbench/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv,SYSTEM_VERILOG,,altera_conduit_bfm_0002,false
+system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_conduit_bfm_0003,false
+system/testbench/system_tb/simulation/submodules/altera_conduit_bfm_0003.sv,SYSTEM_VERILOG,,altera_conduit_bfm_0003,false
 system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_reset_source,false
 system/testbench/system_tb/simulation/submodules/altera_avalon_reset_source.sv,SYSTEM_VERILOG,,altera_avalon_reset_source,false
 system/testbench/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v,VERILOG,,system_CONFIRM_BUTTON,false
 system/testbench/system_tb/simulation/submodules/system_CPU.v,VERILOG,,system_CPU,false
 system/testbench/system_tb/simulation/submodules/system_HOUR_1.v,VERILOG,,system_HOUR_1,false
 system/testbench/system_tb/simulation/submodules/system_JTAG.v,VERILOG,,system_JTAG,false
+system/testbench/system_tb/simulation/submodules/system_LEDs.v,VERILOG,,system_LEDs,false
 system/testbench/system_tb/simulation/submodules/system_RAM.hex,HEX,,system_RAM,false
 system/testbench/system_tb/simulation/submodules/system_RAM.v,VERILOG,,system_RAM,false
 system/testbench/system_tb/simulation/submodules/system_TIMER.v,VERILOG,,system_TIMER,false
@@ -84,12 +87,12 @@ system_tb.system_inst.CPU,system_CPU
 system_tb.system_inst.CPU.cpu,system_CPU_cpu
 system_tb.system_inst.HOUR_1,system_HOUR_1
 system_tb.system_inst.HOUR_2,system_HOUR_1
-system_tb.system_inst.LEDs,system_HOUR_1
 system_tb.system_inst.MIN_1,system_HOUR_1
 system_tb.system_inst.MIN_2,system_HOUR_1
 system_tb.system_inst.SEC_1,system_HOUR_1
 system_tb.system_inst.SEC_2,system_HOUR_1
 system_tb.system_inst.JTAG,system_JTAG
+system_tb.system_inst.LEDs,system_LEDs
 system_tb.system_inst.RAM,system_RAM
 system_tb.system_inst.TIMER,system_TIMER
 system_tb.system_inst.mm_interconnect_0,system_mm_interconnect_0
@@ -232,9 +235,9 @@ system_tb.system_inst_inc_min_button_bfm,altera_conduit_bfm
 system_tb.system_inst_set_mode_button_bfm,altera_conduit_bfm
 system_tb.system_inst_hour_1_bfm,altera_conduit_bfm_0002
 system_tb.system_inst_hour_2_bfm,altera_conduit_bfm_0002
-system_tb.system_inst_leds_bfm,altera_conduit_bfm_0002
 system_tb.system_inst_min_1_bfm,altera_conduit_bfm_0002
 system_tb.system_inst_min_2_bfm,altera_conduit_bfm_0002
 system_tb.system_inst_sec_1_bfm,altera_conduit_bfm_0002
 system_tb.system_inst_sec_2_bfm,altera_conduit_bfm_0002
+system_tb.system_inst_leds_bfm,altera_conduit_bfm_0003
 system_tb.system_inst_reset_bfm,altera_avalon_reset_source

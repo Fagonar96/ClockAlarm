@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 19.1 670 win32 2021.04.29.22:28:43
+# ACDS 19.1 670 win32 2021.05.07.17:37:37
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 19.1 670 win32 2021.04.29.22:28:43
+# ACDS 19.1 670 win32 2021.05.07.17:37:37
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system_tb"
@@ -188,11 +188,13 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_mm_interconnect_0.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_TIMER.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.v \
+  $QSYS_SIMDIR/system_tb/simulation/submodules/system_LEDs.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_JTAG.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_HOUR_1.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_CONFIRM_BUTTON.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_reset_source.sv \
+  $QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0003.sv \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_conduit_bfm.sv \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_avalon_clock_source.sv \
